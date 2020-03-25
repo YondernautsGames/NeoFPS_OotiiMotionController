@@ -11,7 +11,7 @@ This integration example is intended to be dropped in to a fresh project along w
 
 1. Import NeoFPS and apply the required Unity settings using the NeoFPS Settings Wizard. You can find more information about this process [here](https://docs.neofps.com/manual/neofps-installation.html).
 
-2. Import Ootii's Third Person Motion Controller asset.
+2. Import Ootii's Third Person Motion Controller asset (do not allow the motion controller to overrite project layers, you will need to customize these layers for your setup as the default layers override the Neo FPS layers)
 
 3. Clone this repository to a folder inside the project Assets folder such as "NeoFPS_OotiiMotionController".
 	
