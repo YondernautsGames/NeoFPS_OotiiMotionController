@@ -22,6 +22,7 @@ namespace NeoFPS.AI.OotiiMotionController
 
         internal override bool Init(GameObject owner)
         {
+            // REFACTOR: this could also do this by subscribing to the health manager's onIsAliveChanged event, which is probably a more robust approach?
             m_IsActive = base.Init(owner);
             m_HealthManager = owner.GetComponent<IHealthManager>();
             m_IsActive &= m_HealthManager != null;

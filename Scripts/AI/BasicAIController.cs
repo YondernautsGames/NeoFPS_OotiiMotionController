@@ -15,6 +15,7 @@ namespace NeoFPS.AI
         [SerializeField, Tooltip("The behaviours that this AI might execute in each tick.")]
         List<AIBehaviour> m_Behaviours = new List<AIBehaviour>();
         [SerializeField, Tooltip("Tick optimal frequency represents how often, in game time, the AI will reconsider its current actions.")]
+        [Range(0.01f, 5f)]
         float m_TickFrequency = 0.2f;
         [SerializeField, Tooltip("Is this controller active and processing behaviours it contains?")]
         public bool m_IsActive = true;
@@ -37,6 +38,9 @@ namespace NeoFPS.AI
                 return;
             }
 
+            // REFACTOR: Is Time.time the best option, or Time.realtimeSinceLevelWasLoaded? 
+            // If the reduced tickrate is intended as an optimisation, then it should be realtime. 
+            // If it's intended for something like a simple reaction time, then it should be time so that it gets slower if the player can mess with the time scale.
             if (Time.time > m_NextTick)
             {
                 for (int i = 0; i < m_Behaviours.Count; i++)
