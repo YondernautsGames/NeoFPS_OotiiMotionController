@@ -10,8 +10,8 @@ namespace NeoFPS.AI
     public abstract class AIBehaviour : ScriptableObject
     {
 
-        internal bool IsActive = false;
-        internal GameObject Owner;
+        internal bool m_IsActive = false;
+        internal GameObject m_Owner;
 
         /// <summary>
         /// Called during the AIController Start method to initialize any components needed.
@@ -20,7 +20,7 @@ namespace NeoFPS.AI
         /// </summary>
         internal virtual bool Init(GameObject owner)
         {
-            this.Owner = owner;
+            this.m_Owner = owner;
             return true;
         }
 

@@ -15,33 +15,33 @@ namespace NeoFPS.AI.OotiiMotionController
     public class MotionControllerIsAlive : AIBehaviour
     {
         [SerializeField, Tooltip("The time to delay before destroying the object.")]
-        float destroyDelay = 5;
+        float m_DestroyDelay = 5;
 
-        private IHealthManager healthManager;
-        private MotionController motionController;
+        IHealthManager m_HealthManager;
+        MotionController m_MotionController;
 
         internal override bool Init(GameObject owner)
         {
-            IsActive = base.Init(owner);
-            healthManager = owner.GetComponent<IHealthManager>();
-            IsActive &= healthManager != null;
-            Debug.Assert(IsActive, owner + " has an IsAlive behaviour but no IHealthManager component.");
+            m_IsActive = base.Init(owner);
+            m_HealthManager = owner.GetComponent<IHealthManager>();
+            m_IsActive &= m_HealthManager != null;
+            Debug.Assert(m_IsActive, owner + " has an IsAlive behaviour but no IHealthManager component.");
 
-            motionController = Owner.GetComponent<MotionController>();
-            IsActive &= motionController != null;
-            Debug.Assert(IsActive, owner + " has an IsAlive behaviour but no motionController component.");
+            m_MotionController = m_Owner.GetComponent<MotionController>();
+            m_IsActive &= m_MotionController != null;
+            Debug.Assert(m_IsActive, owner + " has an IsAlive behaviour but no motionController component.");
 
-            return IsActive;
+            return m_IsActive;
         }
 
         internal override void Tick()
         {
-            if (healthManager.isAlive)
+            if (m_HealthManager.isAlive)
             {
                 return;
             }
 
-            NavMeshAgent agent = Owner.GetComponent<NavMeshAgent>();
+            NavMeshAgent agent = m_Owner.GetComponent<NavMeshAgent>();
             if (agent != null)
             {
                 agent.isStopped = true;
@@ -52,12 +52,12 @@ namespace NeoFPS.AI.OotiiMotionController
             {
                 message.ID = 1108; // DEATH
                 message.StyleIndex = -1; // Random
-                message.Defender = Owner;
+                message.Defender = m_Owner;
 
-                motionController.SendMessage(message);
+                m_MotionController.SendMessage(message);
             }
 
-            Destroy(Owner, destroyDelay);
+            Destroy(m_Owner, m_DestroyDelay);
 
             StopAllBehaviourControllers();
         }
@@ -68,10 +68,10 @@ namespace NeoFPS.AI.OotiiMotionController
         /// </summary>
         private void StopAllBehaviourControllers()
         {
-            BasicAIController[] controllers = Owner.GetComponents<BasicAIController>();
+            BasicAIController[] controllers = m_Owner.GetComponents<BasicAIController>();
             for (int i = 0; i < controllers.Length; i++)
             {
-                controllers[i].IsActive = false;
+                controllers[i].m_IsActive = false;
             }
         }
     }

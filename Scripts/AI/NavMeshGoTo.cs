@@ -8,20 +8,20 @@ namespace NeoFPS.AI
     public class NavMeshGoTo : AbstractNavMeshBehaviour
     {
         [SerializeField, Tooltip("The maximum distance the player is allowed to be from the destination before this behaviour will fire.")]
-        float triggerDistance = 10f;
+        float m_TriggerDistance = 10f;
         [SerializeField, Tooltip("The location that the agent should go to.")]
-        Transform targetTransform;
+        Transform m_TargetTransform;
 
         internal override void Tick()
         {
-            if (targetTransform == null && agent.destination != targetTransform.position)
+            if (m_TargetTransform == null && m_Agent.destination != m_TargetTransform.position)
             {
                 return;
             }
 
-            if (Vector3.Distance(Owner.transform.position, targetTransform.position) >= triggerDistance)
+            if (Vector3.Distance(m_Owner.transform.position, m_TargetTransform.position) >= m_TriggerDistance)
             {
-                agent.SetDestination(targetTransform.position);
+                m_Agent.SetDestination(m_TargetTransform.position);
             }
         }
     }

@@ -5,17 +5,17 @@ namespace NeoFPS.AI
 {
     public abstract class AbstractNavMeshBehaviour : AIBehaviour
     {
-        protected NavMeshAgent agent;
+        protected NavMeshAgent m_Agent;
 
         internal override bool Init(GameObject owner)
         {
-            IsActive = base.Init(owner);
+            m_IsActive = base.Init(owner);
 
-            agent = owner.GetComponent<NavMeshAgent>();
-            IsActive = agent != null;
-            Debug.Assert(IsActive, owner + " has a NavMeshWander behaviour but no NaveMeshAgent component.");
+            m_Agent = owner.GetComponent<NavMeshAgent>();
+            m_IsActive = m_Agent != null;
+            Debug.Assert(m_IsActive, owner + " has a NavMeshWander behaviour but no NaveMeshAgent component.");
 
-            return IsActive;
+            return m_IsActive;
         }
     }
 }
