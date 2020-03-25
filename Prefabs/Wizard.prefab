@@ -779,7 +779,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c8ae8544e88094409eccd74a1006931, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1331,7 +1331,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c8ae8544e88094409eccd74a1006931, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2661,7 +2661,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c8ae8544e88094409eccd74a1006931, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3468,7 +3468,7 @@ Animator:
   m_GameObject: {fileID: 7041687213828819090}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 87c1e926a5349964c972b9e952f0efba, type: 2}
-  m_Controller: {fileID: 9100000, guid: 203a32add22cf754cbfa854ee80e7afb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 82b7ef3c5227b1c48ad3f1f531eea29d, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -3676,34 +3676,34 @@ MonoBehaviour:
       "ReactivationDelay" : "0", "ShowDebug" : "False", "Category" : "5", "Pack" :
       "Basic", "Tags" : "DisableAdditive|DisableFootIK|DisableLeftHandIK", "MinDistance"
       : "0.2", "MaxDistance" : "0.65", "MinHeight" : "0.5", "MaxHeight" : "0.8", "ClimbableLayers"
-      : "512", "ReachOffset1" : "0.02", "ReachOffset2" : "-0.05"}'
+      : "134217728", "ReachOffset1" : "0.02", "ReachOffset2" : "-0.05"}'
     - '{, "Type" : "com.ootii.Actors.AnimationControllers.Climb_1m, ootii, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null", "Name" : "", "Form" : "-1", "Priority"
       : "30", "OverrideLayers" : "True", "ActionAlias" : "Jump", "IsEnabled" : "True",
       "ReactivationDelay" : "0", "ShowDebug" : "False", "Category" : "5", "Pack" :
       "Basic", "Tags" : "DisableAdditive|DisableFootIK|DisableLeftHandIK", "MinDistance"
       : "0.2", "MaxDistance" : "0.825", "MinHeight" : "0.8", "MaxHeight" : "1.4",
-      "ClimbableLayers" : "512", "ReachOffset1" : "0.02", "ReachOffset2" : "-0.1"}'
+      "ClimbableLayers" : "134217728", "ReachOffset1" : "0.02", "ReachOffset2" : "-0.1"}'
     - '{, "Type" : "com.ootii.Actors.AnimationControllers.Climb_1_8m, ootii, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null", "Name" : "", "Form" : "-1", "Priority"
       : "30", "OverrideLayers" : "True", "ActionAlias" : "Jump", "IsEnabled" : "True",
       "ReactivationDelay" : "0", "ShowDebug" : "False", "Category" : "5", "Pack" :
       "Basic", "Tags" : "DisableAdditive|DisableFootIK|DisableLeftHandIK", "MinDistance"
       : "0.25", "MaxDistance" : "0.825", "MinHeight" : "1.4", "MaxHeight" : "2.4",
-      "HandGrabOffset" : "0.13", "ClimbableLayers" : "512", "ReachOffset1" : "(0,
-      -1.6, -0.1)", "ReachOffset2" : "(0, 0, -0.5)", "ReachOffset3" : "(-0.1, -0.88999999,
-      -0.1)", "ReachOffset4" : "(-0.15000001, 0.0099999998, 0.2)"}'
+      "HandGrabOffset" : "0.13", "ClimbableLayers" : "134217728", "ReachOffset1" :
+      "(0, -1.6, -0.1)", "ReachOffset2" : "(0, 0, -0.5)", "ReachOffset3" : "(-0.1,
+      -0.88999999, -0.1)", "ReachOffset4" : "(-0.15000001, 0.0099999998, 0.2)"}'
     - '{, "Type" : "com.ootii.Actors.AnimationControllers.Climb_2_5m, ootii, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null", "Name" : "", "Form" : "-1", "Priority"
       : "30", "OverrideLayers" : "True", "ActionAlias" : "Jump", "IsEnabled" : "True",
       "ReactivationDelay" : "0", "ShowDebug" : "False", "Category" : "5", "Pack" :
       "Basic", "Tags" : "DisableAdditive|DisableFootIK|DisableLeftHandIK", "MinDistance"
       : "0.25", "MaxDistance" : "0.85", "MinHeight" : "2.4", "MaxHeight" : "3.1",
-      "HandGrabOffset" : "0.13", "ClimbableLayers" : "512", "ReachOffset1" : "(0,
-      -2, -0.30000001)", "ReachOffset2" : "(0.1, 0, 0)", "ReachOffset3" : "(0, -0.85000002,
-      -0.1)", "ReachOffset4" : "(0.1, 0, 0.1)", "ReachOffset5" : "(0, -2.0999999,
-      -0.69999999)", "ReachOffset6" : "(0, -1.6720001, -0.389)", "ReachOffset7" :
-      "(0, -0.85000002, -0.15000001)", "ReachOffset8" : "(0, 0, 0.1)"}'
+      "HandGrabOffset" : "0.13", "ClimbableLayers" : "134217728", "ReachOffset1" :
+      "(0, -2, -0.30000001)", "ReachOffset2" : "(0.1, 0, 0)", "ReachOffset3" : "(0,
+      -0.85000002, -0.1)", "ReachOffset4" : "(0.1, 0, 0.1)", "ReachOffset5" : "(0,
+      -2.0999999, -0.69999999)", "ReachOffset6" : "(0, -1.6720001, -0.389)", "ReachOffset7"
+      : "(0, -0.85000002, -0.15000001)", "ReachOffset8" : "(0, 0, 0.1)"}'
   - _GUID: 
     _Name: Upper Body
     _IgnoreMotionOverride: 0
@@ -3719,9 +3719,9 @@ MonoBehaviour:
   _AnimatorClearType: 0
   _AnimatorClearDelay: 0.2
   _StoredGameObjects: []
-  EditorTabIndex: 1
+  EditorTabIndex: 0
   EditorLayerIndex: 0
-  EditorMotionIndex: 0
+  EditorMotionIndex: 6
   EditorPackIndex: 0
   EditorFilterText: 
   EditorFilterGroupIndex: 0
@@ -3913,11 +3913,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb79e9d3847cfdb42a09f71f4f9841c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groupName: Health
-  behaviours:
+  m_GroupName: Hi Priority State
+  m_Behaviours:
   - {fileID: 11400000, guid: cf37c39ab3afcec4ea2ecd97dfbd745a, type: 2}
-  tickFrequency: 0.05
-  IsActive: 1
+  m_TickFrequency: 0.2
+  m_IsActive: 1
 --- !u!114 &2086885153602467004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3930,12 +3930,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb79e9d3847cfdb42a09f71f4f9841c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groupName: Movement
-  behaviours:
+  m_GroupName: Movement
+  m_Behaviours:
   - {fileID: 11400000, guid: 4646a4758a0d6b44d8184ef9b7704d13, type: 2}
   - {fileID: 11400000, guid: 6e12115d9e9bb224c9e8215fc56373ab, type: 2}
-  tickFrequency: 0.2
-  IsActive: 1
+  m_TickFrequency: 0.2
+  m_IsActive: 1
 --- !u!1 &7048028685760483126
 GameObject:
   m_ObjectHideFlags: 0
@@ -4118,7 +4118,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7c8ae8544e88094409eccd74a1006931, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

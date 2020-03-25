@@ -11,42 +11,46 @@ namespace NeoFPS.AI
     public class BasicAIController : MonoBehaviour
     {
         [SerializeField, Tooltip("The name of this group of behaviours.")]
-        string groupName = "AI Behaviour Group";
+        string m_GroupName = "AI Behaviour Group";
         [SerializeField, Tooltip("The behaviours that this AI might execute in each tick.")]
-        List<AIBehaviour> behaviours;
+        List<AIBehaviour> m_Behaviours = new List<AIBehaviour>();
         [SerializeField, Tooltip("Tick optimal frequency represents how often, in game time, the AI will reconsider its current actions.")]
-        float tickFrequency = 0.2f;
+        [Range(0.01f, 5f)]
+        float m_TickFrequency = 0.2f;
         [SerializeField, Tooltip("Is this controller active and processing behaviours it contains?")]
-        public bool IsActive = true;
+        public bool m_IsActive = true;
 
-        float nextTick;
+        float m_NextTick;
 
         void Start()
         {
-            for (int i = 0; i < behaviours.Count; i++)
+            for (int i = 0; i < m_Behaviours.Count; i++)
             {
-                behaviours[i] = Instantiate(behaviours[i]); // instantiate so that a single SO is not shared across GameObjects
-                behaviours[i].Init(gameObject);
+                m_Behaviours[i] = Instantiate(m_Behaviours[i]); // instantiate so that a single SO is not shared across GameObjects
+                m_Behaviours[i].Init(gameObject);
             }
         }
 
         void Update()
         {
-            if (!IsActive)
+            if (!m_IsActive)
             {
                 return;
             }
 
-            if (Time.time > nextTick)
+            // REFACTOR: Is Time.time the best option, or Time.realtimeSinceLevelWasLoaded? 
+            // If the reduced tickrate is intended as an optimisation, then it should be realtime. 
+            // If it's intended for something like a simple reaction time, then it should be time so that it gets slower if the player can mess with the time scale.
+            if (Time.time > m_NextTick)
             {
-                for (int i = 0; i < behaviours.Count; i++)
+                for (int i = 0; i < m_Behaviours.Count; i++)
                 {
-                    if (behaviours[i].IsActive)
+                    if (m_Behaviours[i].m_IsActive)
                     {
-                        behaviours[i].Tick();
+                        m_Behaviours[i].Tick();
                     }
                 }
-                nextTick = Time.time + tickFrequency;
+                m_NextTick = Time.time + m_TickFrequency;
             }
         }
     }

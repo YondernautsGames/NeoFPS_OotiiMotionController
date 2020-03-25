@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d3915b745165f4da71169a3ac1ccc3, type: 3}
   m_Name: GoTo Waypoint 1
   m_EditorClassIdentifier: 
-  triggerDistance: 10
-  targetTransform: {fileID: 0}
+  m_TriggerDistance: 10
+  m_TargetTransform: {fileID: 0}
