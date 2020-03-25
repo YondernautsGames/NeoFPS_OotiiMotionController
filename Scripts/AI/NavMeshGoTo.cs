@@ -10,7 +10,7 @@ namespace NeoFPS.AI
         [SerializeField, Tooltip("The maximum distance the player is allowed to be from the destination before this behaviour will fire.")]
         float m_TriggerDistance = 10f;
         [SerializeField, Tooltip("The location that the agent should go to.")]
-        Transform m_TargetTransform;
+        Transform m_TargetTransform = null;
 
         internal override void Tick()
         {

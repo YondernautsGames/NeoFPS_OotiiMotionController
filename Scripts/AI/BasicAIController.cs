@@ -13,7 +13,7 @@ namespace NeoFPS.AI
         [SerializeField, Tooltip("The name of this group of behaviours.")]
         string m_GroupName = "AI Behaviour Group";
         [SerializeField, Tooltip("The behaviours that this AI might execute in each tick.")]
-        List<AIBehaviour> m_Behaviours;
+        List<AIBehaviour> m_Behaviours = new List<AIBehaviour>();
         [SerializeField, Tooltip("Tick optimal frequency represents how often, in game time, the AI will reconsider its current actions.")]
         float m_TickFrequency = 0.2f;
         [SerializeField, Tooltip("Is this controller active and processing behaviours it contains?")]

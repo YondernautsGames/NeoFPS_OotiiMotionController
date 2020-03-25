@@ -11,7 +11,7 @@ namespace NeoFPS.AI
     {
 
         internal bool m_IsActive = false;
-        internal GameObject m_Owner;
+        internal GameObject m_Owner = null;
 
         /// <summary>
         /// Called during the AIController Start method to initialize any components needed.

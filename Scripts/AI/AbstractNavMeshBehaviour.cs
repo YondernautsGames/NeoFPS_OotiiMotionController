@@ -5,7 +5,7 @@ namespace NeoFPS.AI
 {
     public abstract class AbstractNavMeshBehaviour : AIBehaviour
     {
-        protected NavMeshAgent m_Agent;
+        protected NavMeshAgent m_Agent = null;
 
         internal override bool Init(GameObject owner)
         {
