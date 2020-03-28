@@ -23,7 +23,7 @@ namespace NeoFPS
         protected override void Awake()
         {
             base.Awake();
-            m_MotionController = GetComponent<MotionController>();
+            m_MotionController = GetComponentInParent<MotionController>();
             Debug.Assert(m_MotionController != null, gameObject + " has a MotionControllerDamageHandler but no motionController component.");
 
             m_NavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
