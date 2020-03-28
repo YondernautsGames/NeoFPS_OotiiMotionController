@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d3915b745165f4da71169a3ac1ccc3, type: 3}
-  m_Name: GoTo Waypoint 1
+  m_Script: {fileID: 11500000, guid: 2b75846daefae1147a9913a11410b9e0, type: 3}
+  m_Name: NavMeshSeekPlayer
   m_EditorClassIdentifier: 
-  m_MinDistance: 10
-  m_TargetTransform: {fileID: 0}
+  m_TargetTag: Player
+  m_AutomaticSensingRange: 10

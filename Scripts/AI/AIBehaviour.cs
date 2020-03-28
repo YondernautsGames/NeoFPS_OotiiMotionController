@@ -29,6 +29,7 @@ namespace NeoFPS.AI
         /// the Update cycle depending on the controller configuration. Use this method to 
         /// take any action required.
         /// </summary>
-        internal abstract void Tick();
+        /// <returns>An empty string if the behaviour fired or a reason that the behaviour did not fire.</returns>
+        internal abstract string Tick();
     }
 }

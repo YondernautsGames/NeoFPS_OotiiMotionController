@@ -23,11 +23,20 @@ namespace NeoFPS.AI
         [Tooltip("The maxium number of attempts to find a valid position to navigate to within the parameters set. Set high to increase the chances of finding a valid position in a given frame, or low to minimize performance impact per frame.")]
         public int m_MaxRetries = 10;
         
-        internal override void Tick()
+        internal override string Tick()
         {
-            if (!m_Agent.IsMovingToTarget(0.5f))
+            if (!m_Agent.IsMovingToTarget())
             {
-                m_Agent.TrySetRandomTarget(m_MinDistance, m_MaxDistance, m_MinAngle, m_MaxAngle, m_MaxRetries);
+                if (m_Agent.TrySetRandomTarget(m_MinDistance, m_MaxDistance, m_MinAngle, m_MaxAngle, m_MaxRetries))
+                {
+                    return "";
+                } else
+                {
+                    return "Unable to find a viable wander target.";
+                }
+            } else
+            {
+                return "Already moving to a raget";
             }
         }
 
