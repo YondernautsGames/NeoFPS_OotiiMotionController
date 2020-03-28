@@ -517,6 +517,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wizard (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7041687213828819090, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
 --- !u!1 &543687271
@@ -779,6 +784,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wizard (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7041687213828819090, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
 --- !u!1001 &1157578492
@@ -916,6 +926,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wizard (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7041687213828819090, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
@@ -1189,65 +1204,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1650969545693096452, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_Behaviours.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1650969545693096452, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_Behaviours.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: cf37c39ab3afcec4ea2ecd97dfbd745a,
-        type: 2}
-    - target: {fileID: 1650969545693096452, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_GroupName
-      value: Hi Priority State
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086885153602467004, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_Behaviours.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086885153602467004, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_Behaviours.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: f1e64ea27b90c9c4fbe676f6daa72c99,
-        type: 2}
-    - target: {fileID: 2086885153602467004, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_Behaviours.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 4646a4758a0d6b44d8184ef9b7704d13,
-        type: 2}
-    - target: {fileID: 2086885153602467004, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_GroupName
-      value: Movement
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086885153602467004, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_DebugToConsole
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2086885153602467004, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_Behaviours.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 6e12115d9e9bb224c9e8215fc56373ab,
-        type: 2}
-    - target: {fileID: 4136630127522945019, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 82b7ef3c5227b1c48ad3f1f531eea29d, type: 2}
-    - target: {fileID: 5392912921552036287, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_StoppingDistance
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6332695419268348545, guid: f7c2c654e33596a4b8f362c547f7f36e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1303,88 +1259,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6332695419268348545, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6332695419268348545, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6332695419268348545, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7041687213828819090, guid: f7c2c654e33596a4b8f362c547f7f36e,
         type: 3}
       propertyPath: m_Name
       value: Wizard
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: EditorTabIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: EditorMotionIndex
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.data[8]
-      value: '{, "Type" : "com.ootii.Actors.AnimationControllers.Climb_0_5m, ootii,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "", "Form"
-        : "-1", "Priority" : "30", "OverrideLayers" : "True", "ActionAlias" : "Jump",
-        "IsEnabled" : "True", "ReactivationDelay" : "0", "ShowDebug" : "False", "Category"
-        : "5", "Pack" : "Basic", "Tags" : "DisableAdditive|DisableFootIK|DisableLeftHandIK",
-        "MinDistance" : "0.2", "MaxDistance" : "0.65", "MinHeight" : "0.5", "MaxHeight"
-        : "0.8", "ClimbableLayers" : "134217728", "ReachOffset1" : "0.02", "ReachOffset2"
-        : "-0.05"}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.data[9]
-      value: '{, "Type" : "com.ootii.Actors.AnimationControllers.Climb_1m, ootii,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "", "Form"
-        : "-1", "Priority" : "30", "OverrideLayers" : "True", "ActionAlias" : "Jump",
-        "IsEnabled" : "True", "ReactivationDelay" : "0", "ShowDebug" : "False", "Category"
-        : "5", "Pack" : "Basic", "Tags" : "DisableAdditive|DisableFootIK|DisableLeftHandIK",
-        "MinDistance" : "0.2", "MaxDistance" : "0.825", "MinHeight" : "0.8", "MaxHeight"
-        : "1.4", "ClimbableLayers" : "134217728", "ReachOffset1" : "0.02", "ReachOffset2"
-        : "-0.1"}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.data[10]
-      value: '{, "Type" : "com.ootii.Actors.AnimationControllers.Climb_1_8m, ootii,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "", "Form"
-        : "-1", "Priority" : "30", "OverrideLayers" : "True", "ActionAlias" : "Jump",
-        "IsEnabled" : "True", "ReactivationDelay" : "0", "ShowDebug" : "False", "Category"
-        : "5", "Pack" : "Basic", "Tags" : "DisableAdditive|DisableFootIK|DisableLeftHandIK",
-        "MinDistance" : "0.25", "MaxDistance" : "0.825", "MinHeight" : "1.4", "MaxHeight"
-        : "2.4", "HandGrabOffset" : "0.13", "ClimbableLayers" : "134217728", "ReachOffset1"
-        : "(0, -1.6, -0.1)", "ReachOffset2" : "(0, 0, -0.5)", "ReachOffset3" : "(-0.1,
-        -0.88999999, -0.1)", "ReachOffset4" : "(-0.15000001, 0.0099999998, 0.2)"}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
-        type: 3}
-      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.data[11]
-      value: '{, "Type" : "com.ootii.Actors.AnimationControllers.Climb_2_5m, ootii,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "", "Form"
-        : "-1", "Priority" : "30", "OverrideLayers" : "True", "ActionAlias" : "Jump",
-        "IsEnabled" : "True", "ReactivationDelay" : "0", "ShowDebug" : "False", "Category"
-        : "5", "Pack" : "Basic", "Tags" : "DisableAdditive|DisableFootIK|DisableLeftHandIK",
-        "MinDistance" : "0.25", "MaxDistance" : "0.85", "MinHeight" : "2.4", "MaxHeight"
-        : "3.1", "HandGrabOffset" : "0.13", "ClimbableLayers" : "134217728", "ReachOffset1"
-        : "(0, -2, -0.30000001)", "ReachOffset2" : "(0.1, 0, 0)", "ReachOffset3" :
-        "(0, -0.85000002, -0.1)", "ReachOffset4" : "(0.1, 0, 0.1)", "ReachOffset5"
-        : "(0, -2.0999999, -0.69999999)", "ReachOffset6" : "(0, -1.6720001, -0.389)",
-        "ReachOffset7" : "(0, -0.85000002, -0.15000001)", "ReachOffset8" : "(0, 0,
-        0.1)"}'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}

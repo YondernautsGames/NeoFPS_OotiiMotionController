@@ -25,7 +25,14 @@ namespace NeoFPS.AI
         [SerializeField, Tooltip("Log successful behaviour execution debug info to the console.")]
         public bool m_DebugUnsuccessfulToConsole = false;
 
+        protected IHealthManager m_HealthManager;
+
         float m_NextTick;
+
+        protected virtual void Awake()
+        {
+            m_HealthManager = GetComponent<IHealthManager>();
+        }
 
         void Start()
         {
