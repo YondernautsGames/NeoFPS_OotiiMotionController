@@ -14,6 +14,8 @@ This integration example is intended to be dropped in to a fresh project along w
 2. Import Ootii's Third Person Motion Controller asset (do not allow the motion controller to overrite project layers, you will need to customize these layers for your setup as the default layers override the Neo FPS layers)
 
 3. Clone this repository to a folder inside the project Assets folder such as "NeoFPS_OotiiMotionController".
+
+4. Resolve the errors relating to overriding methods and accessing fields in BasicDamageHandler by making the methods virtual and the fields protected [this will not be necessary after a future release of Neo SPS]
 	
 ## Integration
 
