@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 101888750}
   - component: {fileID: 101888749}
   - component: {fileID: 101888748}
-  m_Layer: 27
+  m_Layer: 0
   m_Name: Platform 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 543687274}
   - component: {fileID: 543687273}
   - component: {fileID: 543687272}
-  m_Layer: 27
+  m_Layer: 0
   m_Name: Platform 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1202182746}
   - component: {fileID: 1202182747}
-  m_Layer: 27
+  m_Layer: 0
   m_Name: Jump Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1537950590}
-  m_Layer: 27
+  m_Layer: 0
   m_Name: Jump End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,7 +1029,7 @@ GameObject:
   - component: {fileID: 1643399769}
   - component: {fileID: 1643399768}
   - component: {fileID: 1643399767}
-  m_Layer: 27
+  m_Layer: 0
   m_Name: Platform 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1350,6 +1350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NeoFPS_MotionController_TestSetup
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175111281969589325, guid: bcdfd70709f6d50458dfa867befbf3de,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 268173111
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcdfd70709f6d50458dfa867befbf3de, type: 3}
