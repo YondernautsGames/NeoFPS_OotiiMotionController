@@ -18,7 +18,12 @@ namespace NeoFPS.AI
         [Range(0.01f, 5f)]
         float m_TickFrequency = 0.2f;
         [SerializeField, Tooltip("Is this controller active and processing behaviours it contains?")]
-        public bool m_IsActive = true;
+        internal bool m_IsActive = true;
+        [Header("Debug")]
+        [SerializeField, Tooltip("Log successful behaviour execution debug info to the console.")]
+        public bool m_DebugSuccessfulToConsole = false;
+        [SerializeField, Tooltip("Log successful behaviour execution debug info to the console.")]
+        public bool m_DebugUnsuccessfulToConsole = false;
 
         float m_NextTick;
 
@@ -43,11 +48,23 @@ namespace NeoFPS.AI
             // If it's intended for something like a simple reaction time, then it should be time so that it gets slower if the player can mess with the time scale.
             if (Time.time > m_NextTick)
             {
+                string result;
                 for (int i = 0; i < m_Behaviours.Count; i++)
                 {
                     if (m_Behaviours[i].m_IsActive)
                     {
-                        m_Behaviours[i].Tick();
+                        result = m_Behaviours[i].Tick();
+                        if (string.IsNullOrEmpty(result) && m_DebugSuccessfulToConsole) {
+                            Debug.Log(m_Behaviours[i] + " behaviour from the " + m_GroupName + " group fired succesfully.");
+                        } else if (!string.IsNullOrEmpty(result) && m_DebugUnsuccessfulToConsole)
+                        {
+                            Debug.Log(m_Behaviours[i] + " from the " + m_GroupName + " group did not fire because " + result);
+                        }
+
+                        if (string.IsNullOrEmpty(result))
+                        {
+                            break;
+                        }
                     }
                 }
                 m_NextTick = Time.time + m_TickFrequency;

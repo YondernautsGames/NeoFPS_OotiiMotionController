@@ -12,11 +12,19 @@ namespace NeoFPS.AI
         /// <summary>
         /// Test if the agent is currently moving to a target.
         /// </summary>
-        /// <param name="reachedDistance">If the agent has a target but is already within this distance then return false</param>
-        /// <returns>Returns true if the agent is currently moving to or calcualting a pat to a target.</returns>
-        public static bool IsMovingToTarget(this NavMeshAgent agent, float reachedDistance)
+        /// <returns>Returns true if the agent is currently moving to or calculating a path to a target.</returns>
+        public static bool IsMovingToTarget(this NavMeshAgent agent)
         {
-            return agent.remainingDistance > reachedDistance || agent.hasPath || agent.pathPending;
+            if (agent.pathPending) return true;
+            if (!agent.hasPath) return false;
+            // If Agent successfully reaches destination
+            if (agent.path.status == NavMeshPathStatus.PathComplete && agent.remainingDistance <= agent.stoppingDistance) return false;
+            // If invalid destination(off mesh or unreachable)
+            if (agent.path.status == NavMeshPathStatus.PathInvalid) return false;
+            // If Agent tried and failed to reach destination
+            if (agent.path.status == NavMeshPathStatus.PathPartial) return false;
+            
+            return true;
         }
 
         /// <summary>
@@ -39,15 +47,29 @@ namespace NeoFPS.AI
                 float rot = Random.Range(minAngle, maxAngle);
 
                 Vector3 randomPoint = agent.transform.position + Quaternion.AngleAxis(rot, Vector3.up) * agent.transform.forward * distance;
-                NavMeshHit hit;
-                if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
-                {
-                    agent.SetDestination(hit.position);
-                    isValid = true;
-                }
+                isValid = SetNearestDestination(agent, randomPoint);
                 retries++;
             }
             return isValid;
+        }
+
+        /// <summary>
+        /// Set the NavMeshAgent destination to a point on the NavMesh nearest to the destination point.
+        /// </summary>
+        /// <param name="destination">The place we want to get to.</param>
+        /// <returns>True if the destination was set succesfully.</returns>
+        public static bool SetNearestDestination(this NavMeshAgent agent, Vector3 destination)
+        {
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(destination, out hit, 1.0f, NavMesh.AllAreas))
+            {
+                agent.SetDestination(hit.position);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

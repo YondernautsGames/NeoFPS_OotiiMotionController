@@ -11,8 +11,8 @@ namespace NeoFPS.AI.OotiiMotionController
     /// Checks to see if the Neo FPS character is alive. If it is do nothing otherwise play the
     /// death animation and destroy the object.
     /// </summary>
-    [CreateAssetMenu(fileName = "IsAlive", menuName = "NeoFPS/AI/IsAlive")]
-    public class MotionControllerIsAlive : AIBehaviour
+    [CreateAssetMenu(fileName = "DieIfNotAlive", menuName = "NeoFPS/AI/IsAlive")]
+    public class MotionControllerDieIfNotAlive : AIBehaviour
     {
         [SerializeField, Tooltip("The time to delay before destroying the object.")]
         float m_DestroyDelay = 5;
@@ -26,20 +26,20 @@ namespace NeoFPS.AI.OotiiMotionController
             m_IsActive = base.Init(owner);
             m_HealthManager = owner.GetComponent<IHealthManager>();
             m_IsActive &= m_HealthManager != null;
-            Debug.Assert(m_IsActive, owner + " has an IsAlive behaviour but no IHealthManager component.");
+            Debug.Assert(m_IsActive, owner + " has an DieIfNotAlive behaviour but no IHealthManager component.");
 
             m_MotionController = m_Owner.GetComponent<MotionController>();
             m_IsActive &= m_MotionController != null;
-            Debug.Assert(m_IsActive, owner + " has an IsAlive behaviour but no motionController component.");
+            Debug.Assert(m_IsActive, owner + " has an DieIfNotAlive behaviour but no motionController component.");
 
             return m_IsActive;
         }
 
-        internal override void Tick()
+        internal override string Tick()
         {
             if (m_HealthManager.isAlive)
             {
-                return;
+                return "Agent is alive.";
             }
 
             NavMeshAgent agent = m_Owner.GetComponent<NavMeshAgent>();
@@ -61,6 +61,8 @@ namespace NeoFPS.AI.OotiiMotionController
             Destroy(m_Owner, m_DestroyDelay);
 
             StopAllBehaviourControllers();
+
+            return "";
         }
 
         /// <summary>

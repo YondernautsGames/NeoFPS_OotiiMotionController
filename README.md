@@ -51,6 +51,8 @@ AI in this integration please do submit partches to improve the system here. Oth
 
 The system consists of `AIBehaviourController` components and `AIBehaviour` scriptable objects. The controllers will process an ordered list of behaviours each `tick` (the frequency of the `tick` is defined)
 in the component settings. Each behaviour that can be executed will be executed. You can have multiple AIBehaviourControllers attached to a single NPC. Each controller having a different set of behaviours.
+The controller will iterate through each of the behaviours listed in the order listed executing each one. If one of them returns success then processing stops. That is
+only a single success behaviour in each group will be fired in each tick.
 
 There are a very limited set of behaviours at this time. As noted above the goal of this system is not to be a true AI system, but rather provide enough of an AI system to enable a self contained demo for
 this integration. 
