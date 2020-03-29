@@ -8,7 +8,7 @@ namespace NeoFPS.AI.ootii
     /// <summary>
     /// Equip a specific weapon set from the Ootii inventory if an enemy has been detected.
     /// </summary>
-    [CreateAssetMenu(fileName = "MotionControllerEquipWeaponSet", menuName = "NeoFPS/AI/Motion Controller/Equip Weapon Set")]
+    [CreateAssetMenu(fileName = "MotionControllerEquipWeaponSet", menuName = "NeoFPS/AI/Motion Controller/Behaviour/Equip Weapon Set")]
     public class MotionControllerEquipWeapon : AIBehaviour
     {
         [SerializeField, Tooltip("The ID of the weapon set to equip.")]
@@ -23,11 +23,22 @@ namespace NeoFPS.AI.ootii
 
         internal override bool Init(GameObject owner)
         {
+            bool isSuccess = false;
             m_InventorySource = owner.GetComponent<BasicInventory>();
-            m_IsActive &= m_InventorySource != null;
-            Debug.Assert(m_IsActive, owner + " has a MotionControllerEquipWeapon AI behaviour but no BasicInventory.");
+            isSuccess = m_InventorySource != null;
+            Debug.Assert(isSuccess, owner + " has a MotionControllerEquipWeapon AI behaviour but no BasicInventory.");
+            isSuccess &= base.Init(owner);
 
-            return m_IsActive && base.Init(owner);
+            if (isSuccess)
+            {
+                IsActive = true;
+                return true;
+            }
+            else
+            {
+                IsActive = false;
+                return true;
+            }
         }
 
         internal override string Tick()

@@ -9,13 +9,20 @@ namespace NeoFPS.AI
 
         internal override bool Init(GameObject owner)
         {
-            m_IsActive = base.Init(owner);
-
             m_Agent = owner.GetComponent<NavMeshAgent>();
-            m_IsActive = m_Agent != null;
-            Debug.Assert(m_IsActive, owner + " has a NavMeshWander behaviour but no NaveMeshAgent component.");
+            bool isSuccess = m_Agent != null;
+            Debug.Assert(isSuccess, owner + " has a NavMeshWander behaviour but no NaveMeshAgent component.");
+            isSuccess &= base.Init(owner);
 
-            return m_IsActive;
+            if (isSuccess)
+            {
+                IsActive = true;
+                return true;
+            } else
+            {
+                IsActive = false;
+                return true;
+            }
         }
     }
 }
