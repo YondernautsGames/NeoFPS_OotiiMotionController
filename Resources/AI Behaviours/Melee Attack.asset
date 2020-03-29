@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224d785540bb21a4b8d1465ba47f32df, type: 3}
   m_Name: Melee Attack
   m_EditorClassIdentifier: 
-  m_Conditions: []
+  m_Conditions:
+  - {fileID: 11400000, guid: 4c052e9e996b9d7448afe02ebe02f97c, type: 2}
   m_Cooldown: 1
