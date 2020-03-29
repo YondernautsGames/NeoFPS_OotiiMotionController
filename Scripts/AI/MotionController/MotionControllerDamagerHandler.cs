@@ -23,7 +23,7 @@ namespace NeoFPS.AI.ootii
             m_MotionController = GetComponentInParent<MotionController>();
             Debug.Assert(m_MotionController != null, gameObject + " has a MotionControllerDamageHandler but no motionController component.");
 
-            m_NavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
+            m_NavMeshAgent = gameObject.GetComponentInParent<NavMeshAgent>();
         }
 
         protected virtual void OnEnable()
