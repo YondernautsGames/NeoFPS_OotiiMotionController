@@ -1205,6 +1205,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
+      propertyPath: m_Behaviours.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
       propertyPath: m_DebugSuccessfulToConsole
       value: 0
       objectReference: {fileID: 0}
@@ -1212,6 +1216,26 @@ PrefabInstance:
       propertyPath: m_DebugUnsuccessfulToConsole
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
+      propertyPath: m_Behaviours.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6e12115d9e9bb224c9e8215fc56373ab,
+        type: 2}
+    - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
+      propertyPath: m_Behaviours.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 74f55050cd1d0454b828c6b25c029150,
+        type: 2}
+    - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
+      propertyPath: m_Behaviours.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f1e64ea27b90c9c4fbe676f6daa72c99,
+        type: 2}
+    - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
+      propertyPath: m_Behaviours.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4646a4758a0d6b44d8184ef9b7704d13,
+        type: 2}
     - target: {fileID: 6332695419268348545, guid: f7c2c654e33596a4b8f362c547f7f36e,
         type: 3}
       propertyPath: m_LocalPosition.x

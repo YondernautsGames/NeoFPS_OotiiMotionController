@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace NeoFPS.AI.ootii
+namespace NeoFPS.AI
 {
     [CreateAssetMenu(fileName = "MotionControllerCanSenseTaggedObject", menuName = "NeoFPS/AI/Motion Controller/Condition/Can Sense Tagged Object")]
-    public class MotionControllerCanSenseTaggedObject : AICondition
+    public class CanSenseTaggedObject : AICondition
     {
         [SerializeField, Tooltip("The tag that must be attached to an object for it to be considered a target. If empty then any tag will be accepted. To be detected targets must have a collider attached.")]
         string m_TargetTag = "";
