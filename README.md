@@ -41,7 +41,9 @@ In order to use the Motion Controller for your on NPCS you will need to do the f
   2. Add a Neo FPS Health Manager, such as `Basic Health Manager`
   3. Add a Neo FPS Damage Handler, such as `Basic Damage Handler`
   4. Add a Neo FPS Surface, such as `Simple Surface`
-  5. Add an AI to control the NPC, such as the NEo FPS [Behavior Designer Integration](https://github.com/YondernautsGames/NeoFPS_BehaviorDesigner) (see below for a description of the super simple AI used in the demo)
+  5. Add `MotionControllerAIController` to the root of the character (even if you don't plan to use this for AI, it handles things like death motions)
+  6. [OPTIONAL] Add an AI to control the NPC, such as the Neo FPS [Behavior Designer Integration](https://github.com/YondernautsGames/NeoFPS_BehaviorDesigner) 
+     (see below for a description of the super simple AI used in the demo)
 
 ## AI
 

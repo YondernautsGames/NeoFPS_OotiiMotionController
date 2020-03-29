@@ -34,7 +34,7 @@ namespace NeoFPS.AI
             m_HealthManager = GetComponent<IHealthManager>();
         }
 
-        void Start()
+        protected virtual void Start()
         {
             for (int i = 0; i < m_Behaviours.Count; i++)
             {
@@ -43,7 +43,7 @@ namespace NeoFPS.AI
             }
         }
 
-        void Update()
+        protected virtual void Update()
         {
             if (!m_IsActive)
             {
