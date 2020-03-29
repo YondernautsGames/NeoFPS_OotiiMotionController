@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using NeoFPS.AI.Behaviour;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace NeoFPS.AI
+namespace NeoFPS.AI.Condition
 {
     /// <summary>
     /// A condition that can be used to control whether an AI Behaviour executes or not.

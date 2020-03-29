@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using NeoFPS.AI.Condition;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace NeoFPS.AI
+namespace NeoFPS.AI.Behaviour
 {
     /// <summary>
     /// An abstract Scriptable Object describing an AI Behaviour that an NPC might exhibit.

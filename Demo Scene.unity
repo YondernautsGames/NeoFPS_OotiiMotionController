@@ -1298,6 +1298,76 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
+--- !u!1 &1780950333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7041687213828819090, guid: f7c2c654e33596a4b8f362c547f7f36e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1780950332}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1780950334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780950333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e71a2a27255de4faf0dcc3842d1673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Items:
+  - ID: Hatchet
+    Quantity: 1
+    _ItemType: 
+    ResourcePath: Weapons/Hatchet_01
+    EquipMotion: BasicItemEquip
+    EquipStyle: 100
+    StoreMotion: BasicItemStore
+    StoreStyle: 100
+    DestroyOnStore: 0
+    Instance: {fileID: 0}
+    LocalPosition: {x: 0, y: 0, z: 0}
+    LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+    _LocalRotationEuler: {x: 0, y: 0, z: 0}
+  Slots:
+  - ID: RIGHT_HAND
+    ItemID: 
+  WeaponSets:
+  - _ID: Hatchet
+    _IsEnabled: 1
+    _Stance: 1
+    _DefaultForm: 100
+    Items:
+    - Instantiate: 1
+      ItemID: Hatchet
+      SlotID: RIGHT_HAND
+  _IsEnabled: 1
+  _InputSourceOwner: {fileID: 0}
+  _AutoFindInputSource: 1
+  _UseNumberKeys: 1
+  _ToggleWeaponSetAlias: Inventory Toggle
+  _ShiftWeaponSetAlias: Inventory Shift
+  _AllowMotionSelfActivation: 0
+  _ActiveWeaponSet: 0
+  _EquipOnStart: 0
+  ItemEquippedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  ItemStoredEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  WeaponSetEquippedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  WeaponSetStoredEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  EditorItemIndex: 0
+  EditorSlotIndex: 0
+  EditorWeaponSetIndex: 0
+  EditorWeaponSetItemIndex: 0
+  EditorShowEvents: 0
 --- !u!1001 &907406351019198527
 PrefabInstance:
   m_ObjectHideFlags: 0

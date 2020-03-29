@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using NeoFPS.AI.Behaviour;
+using UnityEngine;
 using UnityEngine.AI;
 
 namespace NeoFPS.AI
