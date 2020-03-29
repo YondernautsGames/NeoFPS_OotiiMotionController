@@ -39,7 +39,6 @@ namespace NeoFPS.AI
             {
                 m_CachedResult = Test();
                 m_CacheInvalidationTime = Time.realtimeSinceStartup + m_CacheTTL;
-                Debug.Log(this + " cached result = " + m_CachedResult);
             }
             return m_CachedResult;
         }
