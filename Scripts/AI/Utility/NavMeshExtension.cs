@@ -60,6 +60,8 @@ namespace NeoFPS.AI
         /// <returns>True if the destination was set succesfully.</returns>
         public static bool SetNearestDestination(this NavMeshAgent agent, Vector3 destination)
         {
+            if (!agent.enabled) return false;
+
             NavMeshHit hit;
             if (NavMesh.SamplePosition(destination, out hit, 1.0f, NavMesh.AllAreas))
             {

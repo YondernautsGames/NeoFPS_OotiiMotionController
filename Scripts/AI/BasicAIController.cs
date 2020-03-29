@@ -21,11 +21,18 @@ namespace NeoFPS.AI
         internal bool m_IsActive = true;
         [Header("Debug")]
         [SerializeField, Tooltip("Log successful behaviour execution debug info to the console.")]
-        public bool m_DebugSuccessfulToConsole = false;
+        bool m_DebugSuccessfulToConsole = false;
         [SerializeField, Tooltip("Log successful behaviour execution debug info to the console.")]
-        public bool m_DebugUnsuccessfulToConsole = false;
+        bool m_DebugUnsuccessfulToConsole = false;
+
+        protected IHealthManager m_HealthManager;
 
         float m_NextTick;
+
+        protected virtual void Awake()
+        {
+            m_HealthManager = GetComponent<IHealthManager>();
+        }
 
         void Start()
         {

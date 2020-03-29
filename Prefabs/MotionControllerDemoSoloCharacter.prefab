@@ -92,49 +92,6 @@ MonoBehaviour:
     m_Bits: 2023897817
   m_SkinWidth: 0.005
   m_SlopeLimit: 49.5
-  m_UseSlopeSpeedCurve: 1
-  m_SlopeSpeedCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: -1
-      value: 0.5
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.6
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
   m_SlopeFriction: 1
   m_LedgeFriction: 0
   m_WallAngle: 5
@@ -202,6 +159,7 @@ MonoBehaviour:
   m_ConstraintsDamping: 0.5
   m_MouseTurnAngleMin: 0.25
   m_MouseTurnAngleMax: 5
+  m_RelativeTo: {fileID: 0}
   m_MouseSmoothingBufferSize: 10
   m_MouseSmoothingMultiplierMin: 0.05
   m_MouseSmoothingMultiplierMax: 0.5
@@ -247,6 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HeadTransformHandler: {fileID: 114829792687272250}
+  m_BodyTransformHandler: {fileID: 0}
   m_DamageAudioThreshold: 10
   m_LandingMinForce: 10
   m_LandingFullForce: 40
@@ -371,10 +330,12 @@ MonoBehaviour:
   m_JumpChargeTime: 0.25
   m_JumpKey: jump
   m_JumpChargeKey: jumpCharge
+  m_JumpHoldKey: jumpHold
   m_CrouchKey: crouch
+  m_CrouchHoldKey: crouchHold
   m_SprintKey: sprint
-  m_DodgeKey: dodge
-  m_DodgeDirectionKey: dodgeDirection
+  m_DodgeLeftKey: dodgeLeft
+  m_DodgeRightKey: dodgeRight
 --- !u!114 &114106865911500202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,6 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 20978101300941664}
+  m_AudioListener: {fileID: 81665252089408118}
   m_AimTransform: {fileID: 4000010195993730}
   m_PreviousCameraAction: 0
   m_DefaultFoV: 50.625
@@ -587,6 +549,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  m_BobIntervalParamKey: bobInterval
   m_BobInterval: 3
 --- !u!114 &114729298898345794
 MonoBehaviour:
@@ -794,7 +757,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000013759886196}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &114655033965540502
 MonoBehaviour:
   m_ObjectHideFlags: 0
