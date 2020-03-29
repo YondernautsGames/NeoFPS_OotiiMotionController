@@ -520,7 +520,7 @@ PrefabInstance:
     - target: {fileID: 7041687213828819090, guid: f7c2c654e33596a4b8f362c547f7f36e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
@@ -787,7 +787,7 @@ PrefabInstance:
     - target: {fileID: 7041687213828819090, guid: f7c2c654e33596a4b8f362c547f7f36e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
@@ -930,7 +930,7 @@ PrefabInstance:
     - target: {fileID: 7041687213828819090, guid: f7c2c654e33596a4b8f362c547f7f36e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
@@ -1206,7 +1206,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
       propertyPath: m_Behaviours.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
       propertyPath: m_DebugSuccessfulToConsole
@@ -1219,7 +1219,7 @@ PrefabInstance:
     - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
       propertyPath: m_Behaviours.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 6e12115d9e9bb224c9e8215fc56373ab,
+      objectReference: {fileID: 11400000, guid: 4646a4758a0d6b44d8184ef9b7704d13,
         type: 2}
     - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
       propertyPath: m_Behaviours.Array.data[0]
@@ -1229,12 +1229,17 @@ PrefabInstance:
     - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
       propertyPath: m_Behaviours.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: f1e64ea27b90c9c4fbe676f6daa72c99,
+      objectReference: {fileID: 11400000, guid: b6f499f690ecf97409c9c9878099296e,
         type: 2}
     - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
       propertyPath: m_Behaviours.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 4646a4758a0d6b44d8184ef9b7704d13,
+      objectReference: {fileID: 11400000, guid: f1e64ea27b90c9c4fbe676f6daa72c99,
+        type: 2}
+    - target: {fileID: 519686817, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
+      propertyPath: m_Behaviours.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6e12115d9e9bb224c9e8215fc56373ab,
         type: 2}
     - target: {fileID: 6332695419268348545, guid: f7c2c654e33596a4b8f362c547f7f36e,
         type: 3}
@@ -1296,6 +1301,104 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wizard
       objectReference: {fileID: 0}
+    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.size
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: EditorTabIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.data[0]
+      value: '{, "Type" : "com.ootii.Actors.AnimationControllers.BasicIdle, ootii,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "", "Form"
+        : "-1", "Priority" : "0", "OverrideLayers" : "False", "ActionAlias" : "",
+        "IsEnabled" : "True", "ReactivationDelay" : "0", "ShowDebug" : "False", "Category"
+        : "1", "Pack" : "Basic", "Tags" : "", "RotateWithCamera" : "False", "RotationToCameraSpeed"
+        : "360", "RotateWithInput" : "False", "RotationSpeed" : "120", "RotationSmoothing"
+        : "0.1"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.data[1]
+      value: '{, "Type" : "com.ootii.Actors.AnimationControllers.BasicWalkRunStrafe,
+        ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "",
+        "Form" : "-1", "Priority" : "7", "OverrideLayers" : "False", "ActionAlias"
+        : "Run", "IsEnabled" : "True", "ReactivationDelay" : "0", "ShowDebug" : "False",
+        "Category" : "2", "Pack" : "Basic", "Tags" : "", "RequireTarget" : "True",
+        "ActivationAlias" : "Camera Aim", "ActorStances" : "", "DefaultToRun" : "False",
+        "WalkSpeed" : "0", "RunSpeed" : "0", "StartInMove" : "False", "StartInWalk"
+        : "False", "StartInRun" : "False", "RotateWithInput" : "True", "RotateWithCamera"
+        : "False", "RotationSpeed" : "360", "SmoothingSamples" : "10", "Combatant"
+        : "Wizard (com.ootii.Actors.Combat.Combatant)"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.data[12]
+      value: '{, "Type" : "com.ootii.Actors.AnimationControllers.BasicWalkRunPivot,
+        ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "",
+        "Form" : "-1", "Priority" : "5", "OverrideLayers" : "False", "ActionAlias"
+        : "Run", "IsEnabled" : "True", "ReactivationDelay" : "0", "ShowDebug" : "False",
+        "Category" : "2", "Pack" : "Basic", "Tags" : "", "DefaultToRun" : "False",
+        "WalkSpeed" : "0", "RunSpeed" : "0", "RotationSpeed" : "360", "StartInMove"
+        : "False", "StartInWalk" : "False", "StartInRun" : "False", "SmoothingSamples"
+        : "10"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.data[13]
+      value: '{, "Type" : "com.ootii.MotionControllerPacks.BasicItemEquip, ootii,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "BasicItemEquip",
+        "Form" : "-1", "Priority" : "20", "OverrideLayers" : "False", "ActionAlias"
+        : "", "IsEnabled" : "True", "ReactivationDelay" : "0", "ShowDebug" : "False",
+        "Category" : "0", "Pack" : "Basic", "Tags" : "DisableAdditive|EnableLeftHandIK",
+        "SlotID" : "RIGHT_HAND", "ItemID" : "", "ResourcePath" : "", "AddCombatantBodyShape"
+        : "False", "CombatantBodyShapeRadius" : "0.8", "IsEquipped" : "False"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.data[14]
+      value: '{, "Type" : "com.ootii.MotionControllerPacks.BasicItemStore, ootii,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "BasicItemStore",
+        "Form" : "-1", "Priority" : "8", "OverrideLayers" : "False", "ActionAlias"
+        : "", "IsEnabled" : "True", "ReactivationDelay" : "0", "ShowDebug" : "False",
+        "Category" : "0", "Pack" : "Basic", "Tags" : "DisableAdditive|DisableLeftHandIK",
+        "SlotID" : "RIGHT_HAND", "IsEquipped" : "False"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.data[15]
+      value: '{, "Type" : "com.ootii.MotionControllerPacks.BasicMeleeBlock, ootii,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "", "Form"
+        : "-1", "Priority" : "15", "OverrideLayers" : "False", "ActionAlias" : "Combat
+        Block", "IsEnabled" : "True", "ReactivationDelay" : "0", "ShowDebug" : "False",
+        "Category" : "101", "Pack" : "Sword & Shield", "Tags" : "", "RotateWithInput"
+        : "False", "RotateWithCamera" : "False", "RotationSpeed" : "270", "Forward"
+        : "(0.1, 0.02, 0.92323649)", "HorizontalFOA" : "55", "VerticalFOA" : "55",
+        "DeactivateOnAliasRelease" : "True", "ToTargetRotationSpeed" : "360", "ToTargetCameraRotationSpeed"
+        : "720"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.data[16]
+      value: '{, "Type" : "com.ootii.MotionControllerPacks.BasicMeleeAttack, ootii,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "", "Form"
+        : "-1", "Priority" : "16", "OverrideLayers" : "False", "ActionAlias" : "Combat
+        Attack", "IsEnabled" : "True", "ReactivationDelay" : "0", "ShowDebug" : "False",
+        "Category" : "100", "Pack" : "Sword & Shield", "Tags" : "", "TestContinuously"
+        : "True", "RotationSpeed" : "360", "UseDefaultForm" : "True", "DefaultAttackStyleIndex"
+        : "0", "CurrentAttackStyleIndex" : "-1", "CurrentAttackStyleForm" : "0", "AttackStyleDefinitions"
+        : "", "ToTargetRotationSpeed" : "360", "ToTargetCameraRotationSpeed" : "720"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206625801433436416, guid: f7c2c654e33596a4b8f362c547f7f36e,
+        type: 3}
+      propertyPath: EditorPackIndex
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
 --- !u!1 &1780950333 stripped
@@ -1330,10 +1433,52 @@ MonoBehaviour:
     LocalPosition: {x: 0, y: 0, z: 0}
     LocalRotation: {x: 0, y: 0, z: 0, w: 1}
     _LocalRotationEuler: {x: 0, y: 0, z: 0}
+  - ID: Sword_01
+    Quantity: 1
+    _ItemType: 
+    ResourcePath: Weapons/Swords/Sword_01_ap
+    EquipMotion: BasicItemEquip
+    EquipStyle: 100
+    StoreMotion: BasicItemStore
+    StoreStyle: 100
+    DestroyOnStore: 0
+    Instance: {fileID: 0}
+    LocalPosition: {x: 0, y: 0, z: 0}
+    LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+    _LocalRotationEuler: {x: 0, y: 0, z: 0}
+  - ID: Shield_01
+    Quantity: 1
+    _ItemType: 
+    ResourcePath: Weapons/Shields/Shield_01
+    EquipMotion: 
+    EquipStyle: 400
+    StoreMotion: 
+    StoreStyle: 400
+    DestroyOnStore: 0
+    Instance: {fileID: 0}
+    LocalPosition: {x: 0, y: 0, z: 0}
+    LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+    _LocalRotationEuler: {x: 0, y: 0, z: 0}
   Slots:
   - ID: RIGHT_HAND
     ItemID: 
+  - ID: LEFT_LOWER_ARM
+    ItemID: 
   WeaponSets:
+  - _ID: Sword and Shield
+    _IsEnabled: 1
+    _Stance: 1
+    _DefaultForm: 100
+    Items:
+    - Instantiate: 1
+      ItemID: Sword_01
+      SlotID: RIGHT_HAND
+    - Instantiate: 1
+      ItemID: Shield_01
+      SlotID: LEFT_LOWER_ARM
+    - Instantiate: 0
+      ItemID: 
+      SlotID: LEFT_HAND
   - _ID: Hatchet
     _IsEnabled: 1
     _Stance: 1
