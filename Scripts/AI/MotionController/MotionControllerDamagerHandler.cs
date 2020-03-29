@@ -77,7 +77,7 @@ namespace NeoFPS
             {
                 message.ID = EnumMessageID.MSG_COMBAT_DEFENDER_KILLED;
                 message.StyleIndex = -1; // Random
-                message.Defender = gameObject;
+                message.Defender = m_MotionController.gameObject;
                 m_MotionController.SendMessage(message);
                 message.Release();
             }
