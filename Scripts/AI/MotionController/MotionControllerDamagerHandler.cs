@@ -1,14 +1,11 @@
 ﻿using com.ootii.Actors.AnimationControllers;
 using com.ootii.Actors.Combat;
-using com.ootii.Actors.LifeCores;
 using com.ootii.Messages;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace NeoFPS
+namespace NeoFPS.AI.ootii
 {
     /// <summary>
     /// A damage handler for use on Ootii Motion Controller managed characters (NPCs).
@@ -29,12 +26,12 @@ namespace NeoFPS
             m_NavMeshAgent = gameObject.GetComponent<NavMeshAgent>();
         }
 
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             m_HealthManager.onIsAliveChanged += OnIsAliveChanged;
         }
 
-        private void OnDisable()
+        protected virtual void OnDisable()
         {
             m_HealthManager.onIsAliveChanged -= OnIsAliveChanged;
         }
