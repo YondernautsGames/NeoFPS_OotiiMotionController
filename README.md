@@ -82,19 +82,21 @@ Here are some of the behaviours currently included:
 
 ##### Ootii Motion Controller Behaviours
 
-The following behviours require Ootii's Motion Controller asset:
+The following behaviours require Ootii's Motion Controller asset:
 
   1.
 
 The following behaviours require Ootii's Melee Pack add on:
 
   1. MotionControllerEquipWeapon - fire the Ootii motion controller Equip Weapon motion
+  2. MotionControllerMeleeAttack - fire the Melee attack motion, if no melee weapon equipped nothing happens
 
 #### Conditions
 
 The following conditions are included:
 
   1. CanSenseTaggedObject - detects objects with a particular tag
+  2. ProximityToTaggedObject - tests if an object with a given tag is wihin a minimum and maximum range
 
 ## Open Game Art
 
