@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using NeoFPS.AI.Behaviour;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -58,7 +59,7 @@ namespace NeoFPS.AI
                 string result;
                 for (int i = 0; i < m_Behaviours.Count; i++)
                 {
-                    if (m_Behaviours[i].m_IsActive)
+                    if (m_Behaviours[i].IsActive)
                     {
                         result = m_Behaviours[i].Tick();
                         if (string.IsNullOrEmpty(result) && m_DebugSuccessfulToConsole) {
@@ -72,6 +73,9 @@ namespace NeoFPS.AI
                         {
                             break;
                         }
+                    } else if (m_DebugUnsuccessfulToConsole)
+                    {
+                        Debug.Log(m_Behaviours[i] + " from the " + m_GroupName + " group did not fire because it is either inactive or the required conditions were not met.");
                     }
                 }
                 m_NextTick = Time.time + m_TickFrequency;

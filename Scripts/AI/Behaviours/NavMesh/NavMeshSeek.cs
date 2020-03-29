@@ -17,7 +17,9 @@ namespace NeoFPS.AI
         string m_TargetTag = "";
         [SerializeField, Tooltip("The range within which objects will automatically be sensed. Any object that matches other search parameters within this range will be detected regardless of their position.")]
         float m_AutomaticSensingRange = 10f;
-        
+    
+        /// REFACTOR: move the player sensing into a condition MotionControllerCanSensePlayer, but how do we get the sensed value into this behaviour
+
         internal override string Tick()
         {
             List<Collider> result = new List<Collider>();

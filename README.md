@@ -16,6 +16,8 @@ This integration example is intended to be dropped in to a fresh project along w
 3. Clone this repository to a folder inside the project Assets folder such as "NeoFPS_OotiiMotionController".
 
 4. Resolve the errors relating to overriding methods and accessing fields in BasicDamageHandler by making the methods virtual and the fields protected [this will not be necessary after a future release of Neo SPS]
+
+5. Open the `Demo Scene` in the root of this project.
 	
 ## Integration
 
@@ -53,21 +55,51 @@ AI in this integration please do submit partches to improve the system here. Oth
 
 ### Using the AI
 
-The system consists of `AIBehaviourController` components and `AIBehaviour` scriptable objects. The controllers will process an ordered list of behaviours each `tick` (the frequency of the `tick` is defined)
-in the component settings. Each behaviour that can be executed will be executed. You can have multiple AIBehaviourControllers attached to a single NPC. Each controller having a different set of behaviours.
-The controller will iterate through each of the behaviours listed in the order listed executing each one. If one of them returns success then processing stops. That is
-only a single success behaviour in each group will be fired in each tick.
+The system consists of `AIBehaviourController` components and `AIBehaviour` scriptable objects. 
+The controllers will process an ordered list of behaviours each `tick` (the frequency of the `tick` is defined)
+in the component settings. There can be multiple AIBehaviourControllers attached to a single NPC. Each 
+controller having a different set of behaviours and can have a different tick frequency.
 
-There are a very limited set of behaviours at this time. As noted above the goal of this system is not to be a true AI system, but rather provide enough of an AI system to enable a self contained demo for
-this integration. 
+Each controller will iterate through each of the behaviours listed in the order listed.
+Each will be tested to see if can be executed based on whether the behaviour is currently
+active and if the conditions for execution are satisfied. If it can be, it will be executed. The conditions for
+execution can be set by assigning AICondition Scriptable Objects to the behavour. Once a behaviour is executed, and 
+it returns success then processing stops for this tick. That is only a single behaviour in each controller will be 
+fired in each tick.
+
+There are currently a very limited set of behaviourstime. As noted above the goal of this system is not to be a true 
+AI system, but rather provide enough of an AI system to enable a self contained demo for this integration. That said,
+it is growing. If it should become sufficiently viable it may be broken out as an AI in itelf. Contributions are 
+welcome.
+
+#### Behaviours
 
 Here are some of the behaviours currently included:
 
   1. NavMeshWander - have a NavMesh agent wander semi-randomly
   2. NavMeshGoTo - go to a specific place on the navmesh
-  3. MotionControllerIsAlive - check that a Neo FPS NPC is alive and, if not, play the Death motion in Motion Controller
+  3. NavMeshSeek - if an object with a given tag is detected then seek it (move towards it)
 
-  ## Open Game Art
+##### Ootii Motion Controller Behaviours
 
-  This integration includes some Game Art from http://opengameart.org. These assets are under a CC0 license unless otherwsie stated. You are free to use them without restrictions. Please support
-  Open Game Art and the artists who publish there.
+The following behaviours require Ootii's Motion Controller asset:
+
+  1.
+
+The following behaviours require Ootii's Melee Pack add on:
+
+  1. MotionControllerEquipWeapon - fire the Ootii motion controller Equip Weapon motion
+  2. MotionControllerMeleeAttack - fire the Melee attack motion, if no melee weapon equipped nothing happens
+
+#### Conditions
+
+The following conditions are included:
+
+  1. CanSenseTaggedObject - detects objects with a particular tag
+  2. ProximityToTaggedObject - tests if an object with a given tag is wihin a minimum and maximum range
+
+## Open Game Art
+
+This integration includes some Game Art from http://opengameart.org. These assets are under a CC0 license unless 
+otherwsie stated. You are free to use them without restrictions. Please support [Open Game Art](://opengameart.org) 
+and the artists who publish there.

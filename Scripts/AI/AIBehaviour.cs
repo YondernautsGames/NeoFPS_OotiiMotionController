@@ -1,18 +1,44 @@
-﻿using System.Collections;
+﻿using NeoFPS.AI.Condition;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace NeoFPS.AI
+namespace NeoFPS.AI.Behaviour
 {
     /// <summary>
     /// An abstract Scriptable Object describing an AI Behaviour that an NPC might exhibit.
     /// </summary>
     public abstract class AIBehaviour : ScriptableObject
     {
+        [SerializeField, Tooltip("List of conditions that should be met if this behaviour is to fire.")]
+        internal AICondition[] m_Conditions;
 
-        internal bool m_IsActive = false;
+        bool m_IsActive = true;
+        /// <summary>
+        /// Is this behaviour active?
+        /// </summary>
+        internal bool IsActive
+        {
+            get {
+                if (!m_IsActive) return false;
+
+                for (int i = 0; i < m_Conditions.Length; i++)
+                {
+                    if (!m_Conditions[i].GetResult())
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            set { m_IsActive = value; }
+        }
+
+        /// <summary>
+        /// The owning NPC for this AI Behaviour instance.
+        /// </summary>
         internal GameObject m_Owner = null;
-
+        
         /// <summary>
         /// Called during the AIController Start method to initialize any components needed.
         /// <param name="owner">The parent GameObject for this behaviour.</param>
@@ -21,7 +47,12 @@ namespace NeoFPS.AI
         internal virtual bool Init(GameObject owner)
         {
             this.m_Owner = owner;
-            return true;
+            for (int i = 0; i < m_Conditions.Length; i++)
+            {
+                m_Conditions[i] = Instantiate(m_Conditions[i]); // instantiate so that a single SO is not shared across GameObjects
+                m_Conditions[i].Init(this);
+            }
+            return m_IsActive;
         }
 
         /// <summary>
