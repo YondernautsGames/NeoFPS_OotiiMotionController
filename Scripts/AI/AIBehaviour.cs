@@ -9,8 +9,13 @@ namespace NeoFPS.AI
     /// </summary>
     public abstract class AIBehaviour : ScriptableObject
     {
-
-        internal bool m_IsActive = false;
+        /// <summary>
+        /// Is this behaviour active?
+        /// </summary>
+        internal bool m_IsActive = true;
+        /// <summary>
+        /// The owning NPC for this AI Behaviour instance.
+        /// </summary>
         internal GameObject m_Owner = null;
 
         /// <summary>
@@ -21,7 +26,7 @@ namespace NeoFPS.AI
         internal virtual bool Init(GameObject owner)
         {
             this.m_Owner = owner;
-            return true;
+            return m_IsActive;
         }
 
         /// <summary>
