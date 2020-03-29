@@ -72,19 +72,32 @@ AI system, but rather provide enough of an AI system to enable a self contained 
 it is growing. If it should become sufficiently viable it may be broken out as an AI in itelf. Contributions are 
 welcome.
 
+#### Behaviours
+
 Here are some of the behaviours currently included:
 
-  1. MotionControllerEquipWeapon - fire the Ootii motion controller Equip Weapon motion
-  2. NavMeshWander - have a NavMesh agent wander semi-randomly
-  3. NavMeshGoTo - go to a specific place on the navmesh
-  4. NavMeshSeek - if an object with a given tag is detected then seek it (move towards it)
+  1. NavMeshWander - have a NavMesh agent wander semi-randomly
+  2. NavMeshGoTo - go to a specific place on the navmesh
+  3. NavMeshSeek - if an object with a given tag is detected then seek it (move towards it)
 
-And the conditions:
+##### Ootii Motion Controller Behaviours
+
+The following behviours require Ootii's Motion Controller asset:
+
+  1.
+
+The following behaviours require Ootii's Melee Pack add on:
+
+  1. MotionControllerEquipWeapon - fire the Ootii motion controller Equip Weapon motion
+
+#### Conditions
+
+The following conditions are included:
 
   1. CanSenseTaggedObject - detects objects with a particular tag
 
- ## Open Game Art
+## Open Game Art
 
- This integration includes some Game Art from http://opengameart.org. These assets are under a CC0 license unless 
- otherwsie stated. You are free to use them without restrictions. Please support [Open Game Art](://opengameart.org) 
- and the artists who publish there.
+This integration includes some Game Art from http://opengameart.org. These assets are under a CC0 license unless 
+otherwsie stated. You are free to use them without restrictions. Please support [Open Game Art](://opengameart.org) 
+and the artists who publish there.
