@@ -8,12 +8,12 @@ namespace NeoFPS.AI
     {
         protected NavMeshAgent m_Agent = null;
 
-        internal override bool Init(GameObject owner)
+        internal override bool Init(GameObject owner, BasicAIController controller)
         {
             m_Agent = owner.GetComponent<NavMeshAgent>();
             bool isSuccess = m_Agent != null;
             Debug.Assert(isSuccess, owner + " has a NavMeshWander behaviour but no NaveMeshAgent component.");
-            isSuccess &= base.Init(owner);
+            isSuccess &= base.Init(owner, controller);
 
             if (isSuccess)
             {

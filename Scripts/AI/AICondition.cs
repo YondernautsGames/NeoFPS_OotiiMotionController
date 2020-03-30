@@ -8,13 +8,16 @@ namespace NeoFPS.AI.Condition
     /// <summary>
     /// A condition that can be used to control whether an AI Behaviour executes or not.
     /// </summary>
-    public abstract class AICondition : ScriptableObject
+    public abstract class AICondition : AIScriptableObject
     {
-        [SerializeField, Tooltip("Time To Live, in seconds, for the result cache. In order to minimize performance hits the condition will be tested no more frequently than this time.")]
+        [SerializeField, Tooltip("Time To Live, in seconds, for the result cache. In order to minimize performance hits " +
+            "the condition will be tested no more frequently than this time. Note, " +
+            "however, that the controller may have an tick frequency that is slower than this TTL value, " +
+            "in this situation the controllers tick freuqncy will take precedence.")]
         private float m_CacheTTL = 0.025f;
 
         private bool m_CachedResult;
-        internal AIBehaviour m_behaviour;
+        internal AIBehaviour m_Behaviour;
 
         private float m_CacheInvalidationTime = float.NegativeInfinity;
 
@@ -25,7 +28,7 @@ namespace NeoFPS.AI.Condition
         /// </summary>
         internal virtual bool Init(AIBehaviour behaviour)
         {
-            m_behaviour = behaviour;
+            m_Behaviour = behaviour;
             return true;
         }
 

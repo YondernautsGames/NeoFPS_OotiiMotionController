@@ -791,6 +791,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7c2c654e33596a4b8f362c547f7f36e, type: 3}
+--- !u!1 &1116190827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2381779171765756820, guid: e450edc761ec6d44fbfd3330448fc4d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2381779172153523704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1116190844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116190827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85652e4a14cf4545973c8c364180000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1157578492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1518,7 +1536,7 @@ PrefabInstance:
     - target: {fileID: 1155133886379184377, guid: bcdfd70709f6d50458dfa867befbf3de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 1155133886379184377, guid: bcdfd70709f6d50458dfa867befbf3de,
         type: 3}
@@ -1528,7 +1546,7 @@ PrefabInstance:
     - target: {fileID: 1155133886379184377, guid: bcdfd70709f6d50458dfa867befbf3de,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -12.37
       objectReference: {fileID: 0}
     - target: {fileID: 1155133886379184377, guid: bcdfd70709f6d50458dfa867befbf3de,
         type: 3}
@@ -1589,96 +1607,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 724033135, guid: e450edc761ec6d44fbfd3330448fc4d1, type: 3}
-      propertyPath: WeaponSets.Array.data[0].Items.Array.data[0].ItemID
-      value: Hatchet_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 724033135, guid: e450edc761ec6d44fbfd3330448fc4d1, type: 3}
-      propertyPath: Items.Array.data[0].ResourcePath
-      value: Weapons/Swords/Sword_01_collider_ap
-      objectReference: {fileID: 0}
-    - target: {fileID: 724033135, guid: e450edc761ec6d44fbfd3330448fc4d1, type: 3}
-      propertyPath: EditorItemIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 724033135, guid: e450edc761ec6d44fbfd3330448fc4d1, type: 3}
-      propertyPath: Items.Array.data[0].LocalRotation.x
-      value: -0.120956354
-      objectReference: {fileID: 0}
-    - target: {fileID: 724033135, guid: e450edc761ec6d44fbfd3330448fc4d1, type: 3}
-      propertyPath: Items.Array.data[0].LocalRotation.y
-      value: -0.9746455
-      objectReference: {fileID: 0}
-    - target: {fileID: 724033135, guid: e450edc761ec6d44fbfd3330448fc4d1, type: 3}
-      propertyPath: Items.Array.data[0].LocalRotation.z
-      value: 0.11782759
-      objectReference: {fileID: 0}
-    - target: {fileID: 724033135, guid: e450edc761ec6d44fbfd3330448fc4d1, type: 3}
-      propertyPath: Items.Array.data[0].LocalRotation.w
-      value: 0.14680696
-      objectReference: {fileID: 0}
-    - target: {fileID: 724033135, guid: e450edc761ec6d44fbfd3330448fc4d1, type: 3}
-      propertyPath: Items.Array.data[0]._LocalRotationEuler.y
-      value: 18.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 724033138, guid: e450edc761ec6d44fbfd3330448fc4d1, type: 3}
-      propertyPath: EditorMotionIndex
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 724033138, guid: e450edc761ec6d44fbfd3330448fc4d1, type: 3}
-      propertyPath: MotionLayers.Array.data[0].MotionDefinitions.Array.data[15]
-      value: '{, "Type" : "com.ootii.MotionControllerPacks.BasicMeleeAttack, ootii,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "", "Form"
-        : "-1", "Priority" : "16", "OverrideLayers" : "False", "ActionAlias" : "Combat
-        Attack", "IsEnabled" : "True", "ReactivationDelay" : "0", "ShowDebug" : "False",
-        "Category" : "100", "Pack" : "Sword & Shield", "Tags" : "", "TestContinuously"
-        : "True", "RotationSpeed" : "360", "UseDefaultForm" : "True", "DefaultAttackStyleIndex"
-        : "0", "CurrentAttackStyleIndex" : "-1", "CurrentAttackStyleForm" : "0", "AttackStyleDefinitions"
-        : "{AttackStyles : [{__Type : \"com.ootii.Actors.Combat.AttackStyle, ootii,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", _Name : \"Forward
-        Slash\", _ItemType : \"\", _Form : 100, _Parameter : 0, _ParameterID : 100,
-        _Style : 100, _InventorySlotID : \"\", _Delay : 0, _IsInterruptible : True,
-        _Effects : 0, _Forward : \"(0, 0, 1)\", _HorizontalFOA : 70, _VerticalFOA
-        : 40, _MinRange : 0, _MaxRange : 0, _DamageModifier : 1, _NextAttackStyleIndex
-        : 1, EditorDrawAllFields : True},{__Type : \"com.ootii.Actors.Combat.AttackStyle,
-        ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", _Name : \"Back
-        Slash\", _ItemType : \"\", _Form : 101, _Parameter : 0, _ParameterID : 101,
-        _Style : 101, _InventorySlotID : \"\", _Delay : 0, _IsInterruptible : True,
-        _Effects : 0, _Forward : \"(0, 0, 1)\", _HorizontalFOA : 160, _VerticalFOA
-        : 30, _MinRange : 0, _MaxRange : 0, _DamageModifier : 1, _NextAttackStyleIndex
-        : 0, EditorDrawAllFields : True},{__Type : \"com.ootii.Actors.Combat.AttackStyle,
-        ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", _Name : \"Spin
-        Slash\", _ItemType : \"\", _Form : 102, _Parameter : 0, _ParameterID : 102,
-        _Style : 102, _InventorySlotID : \"\", _Delay : 0, _IsInterruptible : True,
-        _Effects : 0, _Forward : \"(0, -0.23999999, 0.96799999)\", _HorizontalFOA
-        : 210, _VerticalFOA : 20, _MinRange : 0, _MaxRange : 0, _DamageModifier :
-        1, _NextAttackStyleIndex : -1, EditorDrawAllFields : True},{__Type : \"com.ootii.Actors.Combat.AttackStyle,
-        ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", _Name : \"Low
-        Forward Slash\", _ItemType : \"\", _Form : 103, _Parameter : 0, _ParameterID
-        : 103, _Style : 103, _InventorySlotID : \"\", _Delay : 0, _IsInterruptible
-        : True, _Effects : 0, _Forward : \"(0, 0, 1)\", _HorizontalFOA : 120, _VerticalFOA
-        : 30, _MinRange : 0, _MaxRange : 0, _DamageModifier : 1, _NextAttackStyleIndex
-        : -1, EditorDrawAllFields : True},{__Type : \"com.ootii.Actors.Combat.AttackStyle,
-        ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", _Name : \"Pommel
-        Blash\", _ItemType : \"\", _Form : 104, _Parameter : 0, _ParameterID : 104,
-        _Style : 104, _InventorySlotID : \"\", _Delay : 0, _IsInterruptible : True,
-        _Effects : 0, _Forward : \"(0, 0, 1)\", _HorizontalFOA : 30, _VerticalFOA
-        : 30, _MinRange : 0.1, _MaxRange : 1, _DamageModifier : 0.5, _NextAttackStyleIndex
-        : -1, EditorDrawAllFields : True},{__Type : \"com.ootii.Actors.Combat.AttackStyle,
-        ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", _Name : \"Jump
-        Slash\", _ItemType : \"\", _Form : 105, _Parameter : 0, _ParameterID : 105,
-        _Style : 105, _InventorySlotID : \"\", _Delay : 0, _IsInterruptible : True,
-        _Effects : 0, _Forward : \"(0, 0, 1)\", _HorizontalFOA : 20, _VerticalFOA
-        : 50, _MinRange : 0, _MaxRange : 0, _DamageModifier : 1, _NextAttackStyleIndex
-        : -1, EditorDrawAllFields : True},{__Type : \"com.ootii.Actors.Combat.AttackStyle,
-        ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", _Name : \"Jump
-        Spin Slash\", _ItemType : \"\", _Form : 106, _Parameter : 0, _ParameterID
-        : 106, _Style : 106, _InventorySlotID : \"\", _Delay : 0, _IsInterruptible
-        : False, _Effects : 0, _Forward : \"(0, 0, 1)\", _HorizontalFOA : 70, _VerticalFOA
-        : 40, _MinRange : 0, _MaxRange : 0, _DamageModifier : 1, _NextAttackStyleIndex
-        : -1, EditorDrawAllFields : True}]}", "ToTargetRotationSpeed" : "360", "ToTargetCameraRotationSpeed"
-        : "720"}'
-      objectReference: {fileID: 0}
     - target: {fileID: 2381779171765534644, guid: e450edc761ec6d44fbfd3330448fc4d1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1739,5 +1667,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: Motion Controller Third Person Character
       objectReference: {fileID: 0}
+    - target: {fileID: 2381779172145537090, guid: e450edc761ec6d44fbfd3330448fc4d1,
+        type: 3}
+      propertyPath: m_Behaviours.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381779172145537090, guid: e450edc761ec6d44fbfd3330448fc4d1,
+        type: 3}
+      propertyPath: m_Behaviours.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 37ed7a6452f8fe141998970d6ec55aab,
+        type: 2}
+    - target: {fileID: 2381779172145537090, guid: e450edc761ec6d44fbfd3330448fc4d1,
+        type: 3}
+      propertyPath: m_Behaviours.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f9597d1202c71044580fd2979664b52b,
+        type: 2}
+    - target: {fileID: 2381779172145537090, guid: e450edc761ec6d44fbfd3330448fc4d1,
+        type: 3}
+      propertyPath: m_Behaviours.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 74f55050cd1d0454b828c6b25c029150,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e450edc761ec6d44fbfd3330448fc4d1, type: 3}

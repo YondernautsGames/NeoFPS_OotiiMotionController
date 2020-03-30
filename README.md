@@ -78,7 +78,7 @@ Here are some of the behaviours currently included:
 
   1. NavMeshWander - have a NavMesh agent wander semi-randomly
   2. NavMeshGoTo - go to a specific place on the navmesh
-  3. NavMeshSeek - if an object with a given tag is detected then seek it (move towards it)
+  3. NavMeshSeek - Move towards an object
 
 ##### Ootii Motion Controller Behaviours
 
@@ -95,8 +95,78 @@ The following behaviours require Ootii's Melee Pack add on:
 
 The following conditions are included:
 
-  1. CanSenseTaggedObject - detects objects with a particular tag
+  1. CanSenseObject - detects objects with a particular tag
   2. ProximityToTaggedObject - tests if an object with a given tag is wihin a minimum and maximum range
+
+### Variables
+
+Variables are an important part of behaviours and conditions. Local variables are stored
+in the AI Controller itself. Object variables are stored in the Blackboard component on the
+Game Object.
+
+#### Object Variables
+
+All behaviours attached to a game object, regardless of the controller they are attached ti, along with the conditions 
+they havethem, can access object variables. Object variables are stored in the Blackboard component.
+These are accessed using `GetVariable(VARIABLE_NAME)` and set using `SetVariable(VARIABLE_NAME, VALUE)` methods of the
+AI behaviours and conditions.
+
+For example:
+
+```C#
+GameObject target = GameObject.FindGameObjectWithTag("Player");
+if (target == null)
+{
+    return "Unable to find a GameObject that matches the specified criteria.";
+}
+else
+{
+    SetVariable("Target", target);
+}
+```
+
+and
+
+```
+GameObject target = GetLocalVariable("Target");
+if (target == null)
+{
+    return "No target specified.";
+}
+
+HandleMeleeAttackMotion(target);
+```
+
+#### Local Variables
+
+All behaviours belonging to a controller, along with the conditions attached to them, can access local variables.
+These are accessed using methods on the controller object: `GetLocalVariable(VARIABLE_NAME)` 
+and `SetLocalVariable(VARIABLE_NAME, VALUE)`. 
+For example:
+
+```C#
+GameObject target = GameObject.FindGameObjectWithTag("Player");
+if (target == null)
+{
+    return "Unable to find a GameObject that matches the specified criteria.";
+}
+else
+{
+    m_Controller.SetLocalVariable("Target", target);
+}
+```
+
+and
+
+```
+GameObject target = m_Controller.GetLocalVariable("Target");
+if (target == null)
+{
+    return "No target specified.";
+}
+
+HandleMeleeAttackMotion(target);
+```
 
 ## Open Game Art
 

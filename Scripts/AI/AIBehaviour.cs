@@ -8,7 +8,7 @@ namespace NeoFPS.AI.Behaviour
     /// <summary>
     /// An abstract Scriptable Object describing an AI Behaviour that an NPC might exhibit.
     /// </summary>
-    public abstract class AIBehaviour : ScriptableObject
+    public abstract class AIBehaviour : AIScriptableObject
     {
         [SerializeField, Tooltip("List of conditions that should be met if this behaviour is to fire.")]
         internal AICondition[] m_Conditions;
@@ -38,15 +38,21 @@ namespace NeoFPS.AI.Behaviour
         /// The owning NPC for this AI Behaviour instance.
         /// </summary>
         internal GameObject m_Owner = null;
-        
+        /// <summary>
+        /// The controller that manages this behaviour.
+        /// </summary>
+        internal BasicAIController m_Controller;
+
         /// <summary>
         /// Called during the AIController Start method to initialize any components needed.
         /// <param name="owner">The parent GameObject for this behaviour.</param>
         /// <return>True if the behaviour has been correctly initialized.</return>
         /// </summary>
-        internal virtual bool Init(GameObject owner)
+        internal virtual bool Init(GameObject owner, BasicAIController controller)
         {
-            this.m_Owner = owner;
+            m_Owner = owner;
+            m_Controller = controller;
+
             for (int i = 0; i < m_Conditions.Length; i++)
             {
                 m_Conditions[i] = Instantiate(m_Conditions[i]); // instantiate so that a single SO is not shared across GameObjects

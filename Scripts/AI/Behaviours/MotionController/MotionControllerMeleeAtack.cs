@@ -14,19 +14,21 @@ namespace NeoFPS.AI.OotiiMotionController
     [CreateAssetMenu(fileName = "MotionControllerMeleeAttack", menuName = "NeoFPS/AI/Motion Controller/Behaviour/Melee Attack")]
     public class MotionControllerMeleeAtack : AIBehaviour
     {
+        [SerializeField, Tooltip("The name of the variable containing the game object to seek.")]
+        string m_Target = "Target";
         [SerializeField, Tooltip("The minimum time between attacks.")]
         float m_Cooldown = 1f;
 
         private MotionController m_MotionController;
         float m_NextAttackTime = 0;
 
-        internal override bool Init(GameObject owner)
+        internal override bool Init(GameObject owner, BasicAIController controller)
         {
             bool isSuccess = false;
             m_MotionController = owner.GetComponent<MotionController>();
             isSuccess = m_MotionController != null;
             Debug.Assert(isSuccess, owner + " has a MotionControllerMeleeAttack AI behaviour but no MotionController.");
-            isSuccess &= base.Init(owner);
+            isSuccess &= base.Init(owner, controller);
 
             if (isSuccess)
             {
@@ -47,17 +49,20 @@ namespace NeoFPS.AI.OotiiMotionController
                 return "Melee attack is on cooldown.";
             }
 
-            HandleMeleeAttackMotion();
+            GameObject target = GetVariable(m_Target);
+            if (target == null)
+            {
+                return "No target specified.";
+            }
+
+            HandleMeleeAttackMotion(target);
             m_NextAttackTime = Time.time + m_Cooldown;
 
             return "";
         }
 
-        private void HandleMeleeAttackMotion()
+        private void HandleMeleeAttackMotion(GameObject target)
         {
-            // FIXME: Can't be finding objects with tag here, need to use a shared variable
-            GameObject target = GameObject.FindGameObjectWithTag("Player");
-
             CombatMessage message = CombatMessage.Allocate();
             if (message != null)
             {

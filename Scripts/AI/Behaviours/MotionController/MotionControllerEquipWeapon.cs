@@ -7,7 +7,7 @@ using UnityEngine;
 namespace NeoFPS.AI.ootii
 {
     /// <summary>
-    /// Equip a specific weapon set from the Ootii inventory if an enemy has been detected.
+    /// Equip a specific weapon set from the Ootii inventory.
     /// </summary>
     [CreateAssetMenu(fileName = "MotionControllerEquipWeaponSet", menuName = "NeoFPS/AI/Motion Controller/Behaviour/Equip Weapon Set")]
     public class MotionControllerEquipWeapon : AIBehaviour
@@ -22,13 +22,13 @@ namespace NeoFPS.AI.ootii
         /// </summary>
         private bool m_IsMotionActive;
 
-        internal override bool Init(GameObject owner)
+        internal override bool Init(GameObject owner, BasicAIController controller)
         {
             bool isSuccess = false;
             m_InventorySource = owner.GetComponent<BasicInventory>();
             isSuccess = m_InventorySource != null;
             Debug.Assert(isSuccess, owner + " has a MotionControllerEquipWeapon AI behaviour but no BasicInventory.");
-            isSuccess &= base.Init(owner);
+            isSuccess &= base.Init(owner, controller);
 
             if (isSuccess)
             {
