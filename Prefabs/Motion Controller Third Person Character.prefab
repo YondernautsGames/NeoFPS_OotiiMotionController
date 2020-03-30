@@ -632,6 +632,7 @@ GameObject:
   - component: {fileID: 2381779172145537092}
   - component: {fileID: 2381779172145537094}
   - component: {fileID: 2381779172145537095}
+  - component: {fileID: 1116190843}
   - component: {fileID: 2381779172145537080}
   - component: {fileID: 2381779172145537081}
   - component: {fileID: 724033133}
@@ -739,6 +740,20 @@ MonoBehaviour:
   m_Surface:
     m_Value: 9
 --- !u!114 &2381779172145537095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2381779171765756820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f213adc9fbbb840be7285f6ade6071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Multiplier: 1
+  m_Critical: 0
+--- !u!114 &1116190843
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -865,8 +880,8 @@ MonoBehaviour:
     DestroyOnStore: 0
     Instance: {fileID: 0}
     LocalPosition: {x: 0.195, y: 0.359, z: -0.33}
-    LocalRotation: {x: 0.14326982, y: 0.98355526, z: -0.089373045, w: 0.06407188}
-    _LocalRotationEuler: {x: -191.196, y: 354.124, z: -164.001}
+    LocalRotation: {x: -0.120956354, y: -0.9746455, z: 0.11782759, w: 0.14680696}
+    _LocalRotationEuler: {x: -191.196, y: 18.71, z: -164.001}
   - ID: Shield_01
     Quantity: 1
     _ItemType: 
@@ -938,7 +953,7 @@ MonoBehaviour:
   WeaponSetStoredEvent:
     m_PersistentCalls:
       m_Calls: []
-  EditorItemIndex: 2
+  EditorItemIndex: 0
   EditorSlotIndex: 2
   EditorWeaponSetIndex: 0
   EditorWeaponSetItemIndex: 0
@@ -1196,8 +1211,50 @@ MonoBehaviour:
       : "True", "ReactivationDelay" : "0", "ShowDebug" : "False", "Category" : "100",
       "Pack" : "Sword & Shield", "Tags" : "", "TestContinuously" : "True", "RotationSpeed"
       : "360", "UseDefaultForm" : "True", "DefaultAttackStyleIndex" : "0", "CurrentAttackStyleIndex"
-      : "-1", "CurrentAttackStyleForm" : "0", "AttackStyleDefinitions" : "", "ToTargetRotationSpeed"
-      : "360", "ToTargetCameraRotationSpeed" : "720"}'
+      : "-1", "CurrentAttackStyleForm" : "0", "AttackStyleDefinitions" : "{AttackStyles
+      : [{__Type : \"com.ootii.Actors.Combat.AttackStyle, ootii, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null\", _Name : \"Forward Slash\", _ItemType
+      : \"\", _Form : 100, _Parameter : 0, _ParameterID : 100, _Style : 100, _InventorySlotID
+      : \"\", _Delay : 0, _IsInterruptible : True, _Effects : 0, _Forward : \"(0,
+      0, 1)\", _HorizontalFOA : 70, _VerticalFOA : 40, _MinRange : 0, _MaxRange :
+      0, _DamageModifier : 1, _NextAttackStyleIndex : 1, EditorDrawAllFields : True},{__Type
+      : \"com.ootii.Actors.Combat.AttackStyle, ootii, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null\", _Name : \"Back Slash\", _ItemType : \"\", _Form : 101,
+      _Parameter : 0, _ParameterID : 101, _Style : 101, _InventorySlotID : \"\", _Delay
+      : 0, _IsInterruptible : True, _Effects : 0, _Forward : \"(0, 0, 1)\", _HorizontalFOA
+      : 160, _VerticalFOA : 30, _MinRange : 0, _MaxRange : 0, _DamageModifier : 1,
+      _NextAttackStyleIndex : 0, EditorDrawAllFields : True},{__Type : \"com.ootii.Actors.Combat.AttackStyle,
+      ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", _Name : \"Spin
+      Slash\", _ItemType : \"\", _Form : 102, _Parameter : 0, _ParameterID : 102,
+      _Style : 102, _InventorySlotID : \"\", _Delay : 0, _IsInterruptible : True,
+      _Effects : 0, _Forward : \"(0, -0.23999999, 0.96799999)\", _HorizontalFOA :
+      210, _VerticalFOA : 20, _MinRange : 0, _MaxRange : 0, _DamageModifier : 1, _NextAttackStyleIndex
+      : -1, EditorDrawAllFields : True},{__Type : \"com.ootii.Actors.Combat.AttackStyle,
+      ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", _Name : \"Low
+      Forward Slash\", _ItemType : \"\", _Form : 103, _Parameter : 0, _ParameterID
+      : 103, _Style : 103, _InventorySlotID : \"\", _Delay : 0, _IsInterruptible :
+      True, _Effects : 0, _Forward : \"(0, 0, 1)\", _HorizontalFOA : 120, _VerticalFOA
+      : 30, _MinRange : 0, _MaxRange : 0, _DamageModifier : 1, _NextAttackStyleIndex
+      : -1, EditorDrawAllFields : True},{__Type : \"com.ootii.Actors.Combat.AttackStyle,
+      ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", _Name : \"Pommel
+      Blash\", _ItemType : \"\", _Form : 104, _Parameter : 0, _ParameterID : 104,
+      _Style : 104, _InventorySlotID : \"\", _Delay : 0, _IsInterruptible : True,
+      _Effects : 0, _Forward : \"(0, 0, 1)\", _HorizontalFOA : 30, _VerticalFOA :
+      30, _MinRange : 0.1, _MaxRange : 1, _DamageModifier : 0.5, _NextAttackStyleIndex
+      : -1, EditorDrawAllFields : True},{__Type : \"com.ootii.Actors.Combat.AttackStyle,
+      ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", _Name : \"Jump
+      Slash\", _ItemType : \"\", _Form : 105, _Parameter : 0, _ParameterID : 105,
+      _Style : 105, _InventorySlotID : \"\", _Delay : 0, _IsInterruptible : True,
+      _Effects : 0, _Forward : \"(0, 0, 1)\", _HorizontalFOA : 20, _VerticalFOA :
+      50, _MinRange : 0, _MaxRange : 0, _DamageModifier : 1, _NextAttackStyleIndex
+      : -1, EditorDrawAllFields : True},{__Type : \"com.ootii.Actors.Combat.AttackStyle,
+      ootii, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\", _Name : \"Jump
+      Spin Slash\", _ItemType : \"\", _Form : 106, _Parameter : 0, _ParameterID :
+      106, _Style : 106, _InventorySlotID : \"\", _Delay : 0, _IsInterruptible : False,
+      _Effects : 0, _Forward : \"(0, 0, 1)\", _HorizontalFOA : 70, _VerticalFOA :
+      40, _MinRange : 0, _MaxRange : 0, _DamageModifier : 1, _NextAttackStyleIndex
+      : -1, EditorDrawAllFields : True}]}", "ToTargetRotationSpeed" : "360", "ToTargetCameraRotationSpeed"
+      : "720"}'
   - _GUID: 
     _Name: Upper Body
     _IgnoreMotionOverride: 0
@@ -1255,7 +1312,7 @@ MonoBehaviour:
   _StoredGameObjects: []
   EditorTabIndex: 1
   EditorLayerIndex: 0
-  EditorMotionIndex: 0
+  EditorMotionIndex: 15
   EditorPackIndex: 0
   EditorFilterText: 
   EditorFilterGroupIndex: 0

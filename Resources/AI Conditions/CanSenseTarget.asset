@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdd9d3d621d299b4fbc26e2366251a29, type: 3}
-  m_Name: EquipWeaponSet
+  m_Script: {fileID: 11500000, guid: 26b7da5631d06b94aa0c4e8239cfe4a8, type: 3}
+  m_Name: CanSenseTarget
   m_EditorClassIdentifier: 
-  m_Conditions:
-  - {fileID: 11400000, guid: fd2c97acb7ea403449afbf849084d8b4, type: 2}
-  m_WeaponSetID: 0
+  m_CacheTTL: 0.025
+  m_VariableName: Target
+  m_AutomaticSensingRange: 10

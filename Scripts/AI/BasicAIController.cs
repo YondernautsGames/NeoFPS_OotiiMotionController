@@ -1,4 +1,5 @@
 ﻿using NeoFPS.AI.Behaviour;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace NeoFPS.AI
     /// A very basic AI controller intended for demo's and prototypes. Each cahracter can have multiple controllers
     /// each providing a different group of behaviours.
     /// </summary>
+    [RequireComponent(typeof(Blackboard))]
     public class BasicAIController : MonoBehaviour
     {
         [SerializeField, Tooltip("The name of this group of behaviours.")]
@@ -27,6 +29,7 @@ namespace NeoFPS.AI
         bool m_DebugUnsuccessfulToConsole = false;
 
         protected IHealthManager m_HealthManager;
+        internal GameObject m_Target;
 
         float m_NextTick;
 
@@ -40,7 +43,42 @@ namespace NeoFPS.AI
             for (int i = 0; i < m_Behaviours.Count; i++)
             {
                 m_Behaviours[i] = Instantiate(m_Behaviours[i]); // instantiate so that a single SO is not shared across GameObjects
-                m_Behaviours[i].Init(gameObject);
+                m_Behaviours[i].Init(gameObject, this);
+            }
+        }
+
+        /// <summary>
+        /// Get the value of a blackborad variable.
+        /// </summary>
+        /// <param name="name">The name of the blackboard variable to retrieve.</param>
+        /// <returns>THe blackboard variable.</returns>
+        public GameObject GetLocalVariable(string name)
+        {
+            if (name == "Target")
+            {
+                return m_Target;
+            }
+            else
+            {
+                throw new NotImplementedException("Getting any variable other than 'Target' is not currently supported.");
+            }
+        }
+
+
+        /// <summary>
+        /// Get the value of a blackborad variable.
+        /// </summary>
+        /// <param name="name">The name of the blackboard variable to retrieve.</param>
+        /// <param name="value">The value of the blackboard variable.</param>
+        public void SetLocalVariable(string name, GameObject value)
+        {
+            if (name == "Target")
+            {
+                m_Target = value;
+            }
+            else
+            {
+                throw new NotImplementedException("Setting any variable other than 'Target' is not currently supported.");
             }
         }
 

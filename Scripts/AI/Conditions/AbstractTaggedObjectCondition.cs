@@ -18,7 +18,7 @@ namespace NeoFPS.AI.Condition
         {
             List<Collider> result = new List<Collider>();
 
-            Collider[] hitColliders = Physics.OverlapSphere(m_behaviour.m_Owner.transform.position, radius);
+            Collider[] hitColliders = Physics.OverlapSphere(m_Behaviour.m_Owner.transform.position, radius);
             for (int i = 0; i < hitColliders.Length; i++)
             {
                 if (!string.IsNullOrEmpty(m_TargetTag))

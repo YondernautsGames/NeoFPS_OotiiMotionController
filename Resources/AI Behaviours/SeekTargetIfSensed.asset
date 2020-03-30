@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b75846daefae1147a9913a11410b9e0, type: 3}
-  m_Name: NavMeshSeekPlayer
+  m_Name: SeekTargetIfSensed
   m_EditorClassIdentifier: 
-  m_TargetTag: Player
-  m_AutomaticSensingRange: 10
+  m_Conditions:
+  - {fileID: 11400000, guid: fd2c97acb7ea403449afbf849084d8b4, type: 2}
+  m_Target: Target
