@@ -95,9 +95,9 @@ MonoBehaviour:
   _LocalPosition: {x: 0, y: 0, z: 0}
   _LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   _LocalRotationEuler: {x: 0, y: 0, z: 0}
-  _MinRange: 0
-  _MaxRange: 1
-  _MinDamage: 50
-  _MaxDamage: 50
+  _MinRange: 1
+  _MaxRange: 2
+  _MinDamage: 15
+  _MaxDamage: 20
   _MinImpactPower: 1
   _MaxImpactPower: 1
