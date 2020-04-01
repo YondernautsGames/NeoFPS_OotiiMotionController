@@ -642,6 +642,8 @@ GameObject:
   - component: {fileID: 724033137}
   - component: {fileID: 724033138}
   - component: {fileID: 724033139}
+  - component: {fileID: 1116190844}
+  - component: {fileID: 846110987}
   m_Layer: 0
   m_Name: Motion Controller Third Person Character
   m_TagString: Untagged
@@ -698,6 +700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Melee Behaviours
   m_Behaviours:
+  - {fileID: 11400000, guid: f9597d1202c71044580fd2979664b52b, type: 2}
   - {fileID: 11400000, guid: 74f55050cd1d0454b828c6b25c029150, type: 2}
   - {fileID: 11400000, guid: 37ed7a6452f8fe141998970d6ec55aab, type: 2}
   m_TickFrequency: 0.02
@@ -1097,8 +1100,7 @@ MonoBehaviour:
       : "", "ActorStances" : "", "DefaultToRun" : "True", "WalkSpeed" : "0", "RunSpeed"
       : "0", "StartInMove" : "False", "StartInWalk" : "False", "StartInRun" : "False",
       "RotateWithInput" : "True", "RotateWithCamera" : "False", "RotationSpeed" :
-      "360", "SmoothingSamples" : "10", "Combatant" : "Motion Controller Third Person
-      Character (com.ootii.Actors.Combat.Combatant)"}'
+      "360", "SmoothingSamples" : "10"}'
     - '{, "Type" : "com.ootii.Actors.AnimationControllers.BasicInteraction, ootii,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "Name" : "", "Form"
       : "0", "Priority" : "20", "OverrideLayers" : "False", "ActionAlias" : "Interact",
@@ -1115,8 +1117,7 @@ MonoBehaviour:
       "ActivationAlias" : "", "ActorStances" : "", "DefaultToRun" : "False", "WalkSpeed"
       : "0", "RunSpeed" : "0", "StartInMove" : "False", "StartInWalk" : "False", "StartInRun"
       : "False", "RotateWithInput" : "False", "RotateWithCamera" : "False", "RotationSpeed"
-      : "360", "SmoothingSamples" : "10", "Combatant" : "Motion Controller Third Person
-      Character (com.ootii.Actors.Combat.Combatant)"}'
+      : "360", "SmoothingSamples" : "10"}'
     - '{, "Type" : "com.ootii.MotionControllerPacks.BasicDamaged, ootii, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null", "Name" : "", "Form" : "-1", "Priority"
       : "30", "OverrideLayers" : "True", "ActionAlias" : "", "IsEnabled" : "True",
@@ -1154,48 +1155,47 @@ MonoBehaviour:
       "ReactivationDelay" : "0", "ShowDebug" : "False", "Category" : "5", "Pack" :
       "Basic", "Tags" : "DisableAdditive|DisableFootIK|DisableLeftHandIK", "MinDistance"
       : "0.2", "MaxDistance" : "0.65", "MinHeight" : "0.5", "MaxHeight" : "0.8", "ClimbableLayers"
-      : "512", "ReachOffset1" : "0.02", "ReachOffset2" : "-0.05"}'
+      : "-2147483648", "ReachOffset1" : "0.02", "ReachOffset2" : "-0.05"}'
     - '{, "Type" : "com.ootii.Actors.AnimationControllers.Climb_1m, ootii, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null", "Name" : "", "Form" : "-1", "Priority"
       : "30", "OverrideLayers" : "True", "ActionAlias" : "Jump", "IsEnabled" : "True",
       "ReactivationDelay" : "0", "ShowDebug" : "False", "Category" : "5", "Pack" :
       "Basic", "Tags" : "DisableAdditive|DisableFootIK|DisableLeftHandIK", "MinDistance"
       : "0.2", "MaxDistance" : "0.825", "MinHeight" : "0.8", "MaxHeight" : "1.4",
-      "ClimbableLayers" : "512", "ReachOffset1" : "0.02", "ReachOffset2" : "-0.1"}'
+      "ClimbableLayers" : "-2147483648", "ReachOffset1" : "0.02", "ReachOffset2" :
+      "-0.1"}'
     - '{, "Type" : "com.ootii.Actors.AnimationControllers.Climb_1_8m, ootii, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null", "Name" : "", "Form" : "-1", "Priority"
       : "30", "OverrideLayers" : "True", "ActionAlias" : "Jump", "IsEnabled" : "True",
       "ReactivationDelay" : "0", "ShowDebug" : "False", "Category" : "5", "Pack" :
       "Basic", "Tags" : "DisableAdditive|DisableFootIK|DisableLeftHandIK", "MinDistance"
       : "0.25", "MaxDistance" : "0.825", "MinHeight" : "1.4", "MaxHeight" : "2.4",
-      "HandGrabOffset" : "0.13", "ClimbableLayers" : "512", "ReachOffset1" : "(0,
-      -1.6, -0.1)", "ReachOffset2" : "(0, 0, -0.5)", "ReachOffset3" : "(-0.1, -0.88999999,
-      -0.1)", "ReachOffset4" : "(-0.15000001, 0.0099999998, 0.2)"}'
+      "HandGrabOffset" : "0.13", "ClimbableLayers" : "-2147483648", "ReachOffset1"
+      : "(0, -1.6, -0.1)", "ReachOffset2" : "(0, 0, -0.5)", "ReachOffset3" : "(-0.1,
+      -0.88999999, -0.1)", "ReachOffset4" : "(-0.15000001, 0.0099999998, 0.2)"}'
     - '{, "Type" : "com.ootii.Actors.AnimationControllers.Climb_2_5m, ootii, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null", "Name" : "", "Form" : "-1", "Priority"
       : "30", "OverrideLayers" : "True", "ActionAlias" : "Jump", "IsEnabled" : "True",
       "ReactivationDelay" : "0", "ShowDebug" : "False", "Category" : "5", "Pack" :
       "Basic", "Tags" : "DisableAdditive|DisableFootIK|DisableLeftHandIK", "MinDistance"
       : "0.25", "MaxDistance" : "0.85", "MinHeight" : "2.4", "MaxHeight" : "3.1",
-      "HandGrabOffset" : "0.13", "ClimbableLayers" : "512", "ReachOffset1" : "(0,
-      -2, -0.30000001)", "ReachOffset2" : "(0.1, 0, 0)", "ReachOffset3" : "(0, -0.85000002,
-      -0.1)", "ReachOffset4" : "(0.1, 0, 0.1)", "ReachOffset5" : "(0, -2.0999999,
-      -0.69999999)", "ReachOffset6" : "(0, -1.6720001, -0.389)", "ReachOffset7" :
-      "(0, -0.85000002, -0.15000001)", "ReachOffset8" : "(0, 0, 0.1)"}'
+      "HandGrabOffset" : "0.13", "ClimbableLayers" : "-2147483648", "ReachOffset1"
+      : "(0, -2, -0.30000001)", "ReachOffset2" : "(0.1, 0, 0)", "ReachOffset3" : "(0,
+      -0.85000002, -0.1)", "ReachOffset4" : "(0.1, 0, 0.1)", "ReachOffset5" : "(0,
+      -2.0999999, -0.69999999)", "ReachOffset6" : "(0, -1.6720001, -0.389)", "ReachOffset7"
+      : "(0, -0.85000002, -0.15000001)", "ReachOffset8" : "(0, 0, 0.1)"}'
     - '{, "Type" : "com.ootii.MotionControllerPacks.BasicItemEquip, ootii, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null", "Name" : "BasicItemEquip", "Form" : "-1",
       "Priority" : "20", "OverrideLayers" : "False", "ActionAlias" : "", "IsEnabled"
       : "True", "ReactivationDelay" : "0", "ShowDebug" : "False", "Category" : "0",
       "Pack" : "Basic", "Tags" : "DisableAdditive|EnableLeftHandIK", "SlotID" : "RIGHT_HAND",
       "ItemID" : "", "ResourcePath" : "", "AddCombatantBodyShape" : "False", "CombatantBodyShapeRadius"
-      : "0.8", "InventorySource" : "Motion Controller Third Person Character (com.ootii.Actors.Inventory.BasicInventory)",
-      "IsEquipped" : "False"}'
+      : "0.8", "IsEquipped" : "False"}'
     - '{, "Type" : "com.ootii.MotionControllerPacks.BasicItemStore, ootii, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null", "Name" : "BasicItemStore", "Form" : "-1",
       "Priority" : "8", "OverrideLayers" : "False", "ActionAlias" : "", "IsEnabled"
       : "True", "ReactivationDelay" : "0", "ShowDebug" : "False", "Category" : "0",
       "Pack" : "Basic", "Tags" : "DisableAdditive|DisableLeftHandIK", "SlotID" : "RIGHT_HAND",
-      "InventorySource" : "Motion Controller Third Person Character (com.ootii.Actors.Inventory.BasicInventory)",
       "IsEquipped" : "False"}'
     - '{, "Type" : "com.ootii.MotionControllerPacks.BasicMeleeBlock, ootii, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null", "Name" : "", "Form" : "-1", "Priority"
@@ -1310,16 +1310,16 @@ MonoBehaviour:
   _AnimatorClearType: 0
   _AnimatorClearDelay: 0.2
   _StoredGameObjects: []
-  EditorTabIndex: 1
+  EditorTabIndex: 0
   EditorLayerIndex: 0
-  EditorMotionIndex: 15
+  EditorMotionIndex: 7
   EditorPackIndex: 0
   EditorFilterText: 
   EditorFilterGroupIndex: 0
   EditorShowEvents: 0
   EditorShowDebug: 0
-  EditorShowSettings: 0
-  EditorShowTags: 0
+  EditorShowSettings: 1
+  EditorShowTags: 1
 --- !u!114 &724033139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1407,6 +1407,30 @@ MonoBehaviour:
   EditorWalkOnWalls: 0
   EditorSlideOnSlopes: 0
   EditorRespondToColliders: 0
+--- !u!114 &1116190844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2381779171765756820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85652e4a14cf4545973c8c364180000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &846110987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2381779171765756820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85652e4a14cf4545973c8c364180000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2381779171765759232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2430,7 +2454,6 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

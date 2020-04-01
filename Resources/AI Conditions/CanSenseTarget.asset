@@ -14,4 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CacheTTL: 0.025
   m_VariableName: Target
-  m_AutomaticSensingRange: 10
+  m_TargetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ViewRadius: 150
+  m_ViewAngle: 170
+  m_LineOfSightObstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
