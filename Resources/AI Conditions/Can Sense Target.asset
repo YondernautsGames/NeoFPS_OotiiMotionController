@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26b7da5631d06b94aa0c4e8239cfe4a8, type: 3}
-  m_Name: CanSenseTarget
+  m_Name: Can Sense Target
   m_EditorClassIdentifier: 
+  negate: 0
   m_CacheTTL: 0.025
   m_VariableName: Target
   m_TargetMask:

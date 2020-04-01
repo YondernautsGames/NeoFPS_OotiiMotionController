@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389d69671b08e3845a6d315ddf158a8a, type: 3}
+  m_Name: UnequipWeaponSet
+  m_EditorClassIdentifier: 
+  m_Conditions:
+  - {fileID: 11400000, guid: 58a9b67a0b1e4274a9549e7bc4564066, type: 2}

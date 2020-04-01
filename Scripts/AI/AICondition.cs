@@ -10,6 +10,8 @@ namespace NeoFPS.AI.Condition
     /// </summary>
     public abstract class AICondition : AIScriptableObject
     {
+        [SerializeField, Tooltip("Negate the condition.")]
+        private bool negate = false;
         [SerializeField, Tooltip("Time To Live, in seconds, for the result cache. In order to minimize performance hits " +
             "the condition will be tested no more frequently than this time. Note, " +
             "however, that the controller may have an tick frequency that is slower than this TTL value, " +
@@ -41,7 +43,14 @@ namespace NeoFPS.AI.Condition
         {
             if (Time.realtimeSinceStartup > m_CacheInvalidationTime)
             {
-                m_CachedResult = Test();
+                if (negate)
+                {
+                    m_CachedResult = !Test();
+                }
+                else
+                {
+                    m_CachedResult = Test();
+                }
                 m_CacheInvalidationTime = Time.realtimeSinceStartup + m_CacheTTL;
             }
             return m_CachedResult;
